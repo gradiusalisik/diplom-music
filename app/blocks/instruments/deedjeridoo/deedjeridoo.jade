@@ -1,0 +1,46 @@
+include /blocks/container/container
+include /blocks/link-arrow/link-arrow
+include /blocks/button/button
+
+mixin deedjeridoo()
+	+b.deedjeridoo&attributes(attributes)&attributes({class: 'js-deedjeridoo'})
+		+e('audio').audio.js-deedjeridoo-audio(autoplay)
+			+e('source').source(src='assets/audio/text/dijeridoo.mp3' type='audio/mpeg')
+
+		+container
+			+e.wrapper
+				+e('h1').title ДИДЖЕРИДУ
+
+				+e('p').text
+					| Древнейший духовой деревянный музыкальный инструмент аборигенов северной Австралии.
+					br
+					| Один из самых древних музыкальных инструментов на Земле.
+
+				+e('p').text
+					| Диджериду – европейско-американское название древнейшего музыкального
+					br
+					| инструмента аборигенов Австралии. На севере Австралии, где появилась
+					br
+					| диджериду, её называют йедаки (yidaki).
+
+				+e('p').text
+					| Диджериду нерукотворна, её создает сама природа: из
+					br
+					| куска ствола эвкалипта длиной 1-3 метра, сердцевина
+					br
+					| которого выедена термитами. Нужно лишь отыскать эти
+					br
+					| «заготовки» и диджериду почти готова.
+					br
+					| После того как подходящий ствол
+					br
+					| будет найден, его конец обрабатывают
+					br
+					| пчелиным воском.
+
+
+			+e('img').image(src='assets/images/instruments/deedjeridoo.png')
+
+			+e.footer
+				+link-arrow
+				+button({audio: 'assets/audio/instruments/Didjeridoo.mp3'})

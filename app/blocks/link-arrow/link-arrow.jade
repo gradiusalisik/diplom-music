@@ -1,0 +1,8 @@
+mixin link-arrow(data)
+	- data = data || {};
+	- data.type = data.type || 'back'
+
+	+b('a').link-arrow(
+		href=data.href || jv0
+		class=data.type ? '_type_#{data.type}' : ''
+	)&attributes(attributes)

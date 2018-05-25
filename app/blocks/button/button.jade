@@ -1,0 +1,8 @@
+mixin button(data)
+	- data = data || {};
+	- data.type = data.type || 'music'
+
+	+b.button(class=data.type ? '_type_#{data.type}' : '')&attributes(attributes)&attributes({class: 'js-button'})
+		if data.audio
+			+e('audio').audio.js-button-audio
+				+e('source').source(src=data.audio type='audio/mpeg')

@@ -1,6 +1,71 @@
-extends /blocks/layout-default/layout-default
+include /../node_modules/bemto.jade/bemto
 
-block head
-	- var pageTitle = 'CSSSR Project Template';
+doctype html
+html(lang='ru')
 
-block content
+	- var pageTitle = 'Index';
+
+	include ../blocks/head/head
+
+	body
+		style.
+			.index {
+				position: relative;
+				margin: 10px auto;
+				padding: 20px 10px;
+				width: 500px;
+				background: #999;
+			}
+			.index__h2 {
+				margin: 20px 0 10px;
+				font-family: $font-roboto;
+				font-size: 20px;
+				text-align: center;
+				color: #fff;
+			}
+			.index__item {
+				position: relative;
+				margin-bottom: 5px;
+				padding: 5px 10px;
+				padding-right: 30px;
+				display: block;
+				font-family: $font-roboto;
+				font-size: 14px;
+				text-decoration: none;
+				color: #fff;
+				background-color: rgba(0,0,0,0.1);
+				transition: 0.3s ease-out;
+			}
+			.index__item:after {
+				position: absolute;
+				top: 50%;
+				right: 10px;
+				display: block;
+				width: 10px;
+				height: 10px;
+				content: '';
+				border-radius: 50%;
+				transform: translateY(-50%);
+			}
+			.index__item:hover {
+				background-color: rgba(0,0,0,0.2);
+			}
+			.index__item_state_in-progress:after {
+				background-color: #fbbc05;
+			}
+
+			.index__item_state_test:after{
+				background-color: #FA8072;
+			}
+
+			.index__item_state_done:after {
+				background-color: #34a853;
+			}
+
+		+b.index
+			+e('h2').h2 Общие страницы
+			+e('a').item_state_in-progress(href='main.html') Главная
+
+			+e('h2').h2 Инструменты
+			+e('a').item_state_test(href='arfa.html') Арфа
+			+e('a').item_state_test(href='deedjeridoo.html') Диджериду

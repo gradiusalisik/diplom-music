@@ -1,0 +1,50 @@
+.arfa
+	padding-top 52px
+	overflow hidden
+	min-height 100vh
+	background-image url('../images/bg-instruments.jpg')
+	background-size cover
+
+	&__wrapper
+		max-width 730px
+
+	&__title
+		margin-bottom 25px
+		font-family $font-reformaGrotesk
+		font-size 120px
+		font-weight 300
+		text-transform uppercase
+		color #efe3d1
+
+	&__text
+		font-family $font-vwhead
+		font-size 28px
+		line-height normal
+		color #534b43
+
+		&:not(:last-child)
+			margin-bottom 20px
+
+	&__link
+		text-decoration none
+		color #4ff1ff
+		transition color .3s
+
+		&:hover
+			color rgba(#4ff1ff, .8)
+
+
+	&__image
+		position absolute
+		right 0
+		bottom -100px
+		height 100vh
+
+	&__footer
+		position absolute
+		left 0
+		bottom 48px
+		display flex
+		justify-content space-between
+		align-items flex-end
+		width 100%
