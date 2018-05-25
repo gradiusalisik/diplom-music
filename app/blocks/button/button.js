@@ -26,7 +26,7 @@ export default class {
 	}
 
 	onClick = e => {
-		const { active } = this.options.classes;
+		const {active} = this.options.classes;
 		const $target = $(e.currentTarget);
 		const $audio = $target.find(this.$audio);
 		const audio = $audio[0];
