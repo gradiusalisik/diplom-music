@@ -1,3 +1,38 @@
+include /blocks/container/container
+include /blocks/link-arrow/link-arrow
+include /blocks/button/button
+include /blocks/title/title
+include /blocks/text/text
+
 mixin klarnet()
 	+b.klarnet&attributes(attributes)
-		block
+		+container
+			+e.wrapper
+				+title.klarnet__title Кларнет
+
+				+text.klarnet__text
+					| Духовой деревянный музыкальный инструмент с одинарной тростью.
+					br
+					| Был изобретён около 1700 года в Нюрнберге, в музыке активно используется со второй половины XVIII века.
+
+				+text.klarnet__text
+					| В современном симфоническом оркестре используется
+					br
+					|два (реже три или четыре) кларнета, при этом музыкант,
+					br
+					| играющий на последнем по номеру кларнете, может
+					br
+					| также (в соответствии с партитурой) исполнять партию
+					br
+					| малого кларнета или бас-кларнета.
+
+
+			+e('img').image(src='assets/images/instruments/klarnet.png')
+
+			+e.footer
+				+link-arrow
+
+				+e.wrap-buttons
+					+e.button-video
+						+button._type_video
+					+button({audio: 'assets/audio/instruments/Goboy.mp3'})

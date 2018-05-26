@@ -1,3 +1,29 @@
+include /blocks/container/container
+include /blocks/link-arrow/link-arrow
+include /blocks/button/button
+include /blocks/title/title
+include /blocks/text/text
+
 mixin litavry()
-	+b.litavry&attributes(attributes)
-		block
+	+b.litavry&attributes(attributes)&attributes({class: 'js-litavry'})
+		+container
+			+e.wrapper
+				+title.litavry__title ЛИТАВРЫ
+
+				+text
+					| Ударный музыкальный инструмент с определенной высотой звучания.
+					br
+					| Представляют собой систему двух и более (до пяти) металлических котлов, открытая сторона которых затянута кожей или пластиком. В днище каждого котла находится резонаторное отверствие.Инструмент очень древнего происхождения.
+
+				+text
+					| В Европе литавры, близкие к современным по своей форме, но с постоянным строем, стали известны уже в XV веке. Впоследствии появился механизм натяжных винтов, давший возможность перестройки литавр. Современные литавры могут быть настроены на определённую высоту звучания с помощью специальной педали.
+
+			+e('img').image(src='assets/images/instruments/litavry.png')
+
+			+e.footer
+				+link-arrow
+
+				+e.wrap-buttons
+					+e.button-video
+						+button._type_video
+					+button({audio: 'assets/audio/instruments/Litavry.mp3'})
