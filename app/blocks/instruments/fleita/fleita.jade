@@ -1,0 +1,36 @@
+include /blocks/container/container
+include /blocks/link-arrow/link-arrow
+include /blocks/button/button
+include /blocks/title/title
+include /blocks/text/text
+
+
+mixin fleita()
+	+b.fleita&attributes(attributes)
+		+container
+			+e.wrapper
+				+title.fleita__title Флейта
+
+				+e('img').image(src='assets/images/instruments/fleita.png')
+
+				+text.fleita__text
+					| К группе деревянных инструментов относится, поскольку первоначально эти инструменты изготавливались из дерева.
+
+				+text.fleita__text
+					| В отличие от других духовых инструментов, звуки образуются в результате рассекания потока воздуха об грань, вместо использования язычка.
+
+				+text.fleita__text
+					| Поперечная флейта с 5-6 пальцевыми отверстиями была известна в Китае по меньшей мере 3 тысячи лет назад, а в Индии и Японии — более двух тысяч лет назад.  Флейта проникла в Центральную Европу с Востока через Балканы, где до сих пор остается самым распространенным народным инструментом.
+
+				+text.fleita__text
+					| Флейты обычно делались из серебра, хотя некоторые исполнители все ещё предпочитали дерево.
+					br
+					| В XIX веке были популярны также инструменты из стекла и слоновой кости.
+
+			+e.footer
+				+link-arrow
+
+				+e.wrap-buttons
+					+e.button-video
+						+button._type_video
+					+button({audio: 'assets/audio/instruments/Fagot.mp3'})

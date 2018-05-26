@@ -1,0 +1,53 @@
+include /blocks/container/container
+include /blocks/link-arrow/link-arrow
+include /blocks/button/button
+include /blocks/title/title
+include /blocks/text/text
+
+mixin duduk()
+	+b.duduk&attributes(attributes)&attributes({class: 'js-duduk'})
+		+e('audio').audio.js-duduk-audio(autoplay)
+			+e('source').source(src='assets/audio/text/duduk.mp3' type='audio/mpeg')
+
+		+container
+			+e.wrapper
+				+title.duduk__title Дудук
+
+				+text
+					| Представляет из себя трубку с 9-ю игровыми отверстиями и двойной тростью.
+					br
+					| Традиционное название армянского дудука — циранапох, что дословно может
+					br
+					| быть переведено как «абрикосовая труба» либо «душа абрикосового дерева»
+
+				+text
+					| Дудук обладает тёплым, мягким, слегка приглушённым звуком и
+					br
+					| бархатистым тембром, отличается лиричностью, эмоциональностью и
+					br
+					| выразительностью. При исполнении музыки в парах
+					br
+					| ведущий дудук и дам-дудук) зачастую возникает ощущение
+					br
+					| покоя, умиротворённости и высокого духовного начала.
+
+				+text
+					| Выдающиися дудукисты: Людвиг Гарибян,
+					br
+					| Дживан Гаспарян, Геворг Дабагян, Сергей
+					br
+					| Карапетян, Мкртич Малхасян, Ваче Овсепян.
+					br
+					| Среди азербайджанских музыкантов
+					br
+					| наиболее известен Алихан Самедов.
+
+				+e('img').image(src='assets/images/instruments/duduk.png')
+
+			+e.footer
+				+link-arrow
+
+				+e.wrap-buttons
+					+e.button-video
+						+button._type_video
+					+button({audio: 'assets/audio/instruments/Duduk.mp3'})

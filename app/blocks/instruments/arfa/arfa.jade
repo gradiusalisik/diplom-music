@@ -1,26 +1,31 @@
 include /blocks/container/container
 include /blocks/link-arrow/link-arrow
 include /blocks/button/button
+include /blocks/title/title
+include /blocks/text/text
 
 mixin arfa()
 	+b.arfa&attributes(attributes)
 		+container
 			+e.wrapper
-				+e('h1').title Арфа
-				+e('p').text
+				+title Арфа
+				+text
 					| Струнный щипковый музыкальный инструмент.
 					br
 					| Один из древнейших музыкальных инструментов человечества.
 					br
 					| Произошла от лука с натянутой струной, которая мелодично звучала при выстреле. Позже звук тетивы стали использовать как сигнал. Человек, впервые натянувший на лук три-четыре тетивы, которые из-за своей неодинаковой длины издавали звуки разной высоты, и стал создателем первой арфы.
-				+e('p').text
+				+text
 					| Роль арфы в оркестре не столько эмоциональная, сколько красочная. Арфа часто аккомпанирует разным инструментам оркестра; в других случаях ей поручают эффектные соло. Их немало в
-					+e('a').link(href=jv0) балетах Чайковского,
+					a.arfa__link(href=jv0) балетах Чайковского,&nbsp;
+					| Глазунова, в сочинениях
 					br
-					| Глазунова, в сочинениях Римского-Корсакова.
+					| Римского-Корсакова.
 
 			+e('img').image(src='assets/images/instruments/arfa.png')
 
 			+e.footer
 				+link-arrow
+				+e.button-video
+					+button({type: 'video'})
 				+button({audio: 'assets/audio/instruments/skripka.mp3'})
