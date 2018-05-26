@@ -1,2 +1,53 @@
 .piano
-	display block
+	padding-top 32px
+	overflow hidden
+	background-image url('../images/bg-piano.jpg')
+	background-size cover
+
+	&__wrapper
+		position relative
+
+	&__wrap
+		position relative
+		display flex
+
+	&__title
+		text-align center
+
+	&__text
+		width 540px
+		text-align center
+
+	&__link
+		text-decoration none
+		color #4ff1ff
+		transition color .3s
+
+		&:hover
+			color rgba(#4ff1ff, .8)
+
+	&__image
+		margin-right 30px
+		width 346px
+		height 350px
+
+	&__footer
+		position absolute
+		left 0
+		bottom 70px
+		display flex
+		justify-content space-between
+		align-items flex-end
+		width 346px
+		height 100vh
+
+	&__button-video
+		position absolute
+		z-index 4
+		top -20px
+		left 60px
+
+	&__button-audio
+		position absolute
+		right 0
+		bottom 60px
