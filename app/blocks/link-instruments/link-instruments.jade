@@ -1,0 +1,14 @@
+include /blocks/title/title
+
+mixin link-instruments(data)
+	- data = data || {}
+	+b('a').link-instruments(
+		href=data.href || jv0
+		class=data.type ? '_type_#{data.type}' : ''
+		class=data.reverse ? '_reverse_#{data.reverse}' : ''
+	)&attributes(attributes)
+		+title({
+			size: data.size,
+			notUppercase: data.notUppercase
+		}).link-instruments__title=data.title
+		+e('img').image(src=data.image)

@@ -1,3 +1,42 @@
+include /blocks/container/container
+include /blocks/title/title
+include /blocks/link-arrow/link-arrow
+include /blocks/link-instruments/link-instruments
+
 mixin cooperwinds()
 	+b.cooperwinds&attributes(attributes)
-		block
+		+container
+			+title._fontWeight_medium._color_light.cooperwinds__title МЕДНЫЕ ДУХОВЫЕ
+			+e.wrap
+				+e.content
+					+link-instruments({
+						href: 'trombone.html',
+						type: 'coop',
+						title: 'Тромбон',
+						image: 'assets/images/group-instruments/cooperwinds/trombone.png'
+					})
+					+link-instruments({
+						href: 'truba.html',
+						type: 'coop',
+						reverse: 'row',
+						title: 'Труба',
+						image: 'assets/images/group-instruments/cooperwinds/truba.png'
+					})
+				+e.content
+					+link-instruments({
+						href: 'valtorna.html',
+						type: 'coop',
+						title: 'Валторна',
+						image: 'assets/images/group-instruments/cooperwinds/valtorn.png'
+					})
+					+link-instruments({
+						href: 'tuba.html',
+						type: 'coop',
+						reverse: 'row',
+						title: 'Туба',
+						image: 'assets/images/group-instruments/cooperwinds/tuba.png'
+					})
+
+
+			+e.footer
+				+link-arrow

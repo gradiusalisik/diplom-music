@@ -1,3 +1,9 @@
-mixin title()
-	+b('h1').title&attributes(attributes)
+mixin title(data)
+	- data = data || {}
+
+	+b('h1').title(
+		class=data.size ? '_size_#{data.size}' : ''
+		class=data.fontWeight ? '_fontWeight_#{data.fontWeight}' : ''
+		class=data.notUppercase ? '_notUppercase' : ''
+	)&attributes(attributes)
 		block

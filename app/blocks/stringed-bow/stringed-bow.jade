@@ -1,3 +1,35 @@
+include /blocks/container/container
+include /blocks/title/title
+include /blocks/link-arrow/link-arrow
+include /blocks/link-instruments/link-instruments
+
 mixin stringed-bow()
 	+b.stringed-bow&attributes(attributes)
-		block
+		+container
+			+title._fontWeight_medium._color_light.stringed-bow__title СТРУННО-СМЫЧКОВЫЕ
+			+e.wrap
+				+link-instruments({
+					type: 'wood',
+					href: 'skripka-alt.html',
+					title: 'СКРИПКА и АЛЬТ',
+					size: 'small',
+					notUppercase: true,
+					image: 'assets/images/group-instruments/stringed-bow/skripka.png'
+				}).stringed-bow__link
+				+link-instruments({
+					type: 'wood',
+					href: 'kontrabas.html',
+					title: 'Контрабас',
+					size: 'big',
+					reverse: 'column',
+					image: 'assets/images/group-instruments/stringed-bow/kontrabas.png'
+				}).stringed-bow__link.stringed-bow__link_second
+				+link-instruments({
+					type: 'wood',
+					href: 'violonchel.html',
+					title: 'Виолончель',
+					image: 'assets/images/group-instruments/stringed-bow/violonchel.png'
+				}).stringed-bow__link
+
+			+e.footer
+				+link-arrow
