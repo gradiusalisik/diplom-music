@@ -1,0 +1,56 @@
+include /blocks/container/container
+include /blocks/text/text
+
+mixin main()
+	+b.main&attributes(attributes)&attributes({class: 'js-main'})
+		+e('audio').audio.js-main-audio(autoplay loop)
+			+e('source').source(src='assets/audio/main/main.mp3' type='audio/mpeg')
+
+		+container
+			+e('a').link-dirizher(href='dirizher.html')
+
+			+e.text._piano
+				+text._uppercase._fontgrotesk._color_dark._size_big РОЯЛЬ
+				+e('a').info(href='piano.html')
+
+			+e.text._litavry
+				+text._uppercase._fontgrotesk._color_dark._size_big ЛИТАВРЫ
+				+e('a').info(href='litavry.html')
+
+			+e.text._woodwinds
+				+text._uppercase._fontgrotesk._color_dark._size_big ДЕРЕВЯННО-ДУХОВЫЕ
+				+e('a').info(href='oodwinds.html')
+
+			+e.text._cooperwinds
+				+text._uppercase._fontgrotesk._color_dark._size_big МЕДНО-ДУХОВЫЕ
+				+e('a').info(href='cooperwinds.html')
+
+			+e.text._stringed-bow
+				+text._uppercase._fontgrotesk._color_dark._size_big СТРУННО-СМЫЧКОВЫЕ
+				+e('a').info(href='stringed-bow.html')
+
+			+e.text._arfa
+				+text._uppercase._fontgrotesk._color_dark._size_big АРФА
+				+e('a').info(href='arfa.html')
+
+			+e.wrap
+				+e('video').video.js-main-video(loop autoplay)
+					+e('source').source(src='assets/video/main.mp4' type='video/mp4')
+
+			+e.etno.js-main-etno
+				+e('a').link._tabla(href='tabla.html')
+					+e('img').image(src='assets/images/main/tabla.gif')
+
+				+e('a').link._duduk(href='duduk.html')
+					+e('img').image(src='assets/images/main/duduk.gif')
+
+				+e('a').link._santoor(href='santoor.html')
+					+e('img').image(src='assets/images/main/santoor.gif')
+
+				+e('a').link._deedjereedoo(href='deedjeridoo.html')
+					+e('img').image(src='assets/images/main/deedjereedoo.gif')
+
+
+			+e('button').button.js-main-button(type='button')
+				+e.open
+				+e.close
