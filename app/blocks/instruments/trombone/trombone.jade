@@ -1,3 +1,48 @@
+include /blocks/container/container
+include /blocks/link-arrow/link-arrow
+include /blocks/button/button
+include /blocks/title/title
+include /blocks/text/text
+
 mixin trombone()
 	+b.trombone&attributes(attributes)
-		block
+		+container
+			+e('img').image(src='assets/images/instruments/trombon.png')
+
+			+e.wrapper
+				+title.duduk__title Тромбон
+
+				+text.trombone__text.trombone__text_right
+					| Басово-теноровый регистр.
+					br
+					|  Известен с XV века. От других медных духовых
+					br
+					| отличается наличием кулисы — особой передвижной
+					br
+					| U-образной трубки, с помощью которой музыкант изменяет
+					br
+					| объём заключённого в инструменте воздуха, достигая
+					br
+					| возможности исполнять звуки  хроматического звукоряда
+					br
+					| (на трубе, валторне, тубе этой цели служат вентили).
+
+
+				+text.trombone__text.trombone__text_last
+					| Основным принципом игры на тромбоне
+					br
+					| являются получение гармонических созвуков
+					br
+					| путём смены положения губ и изменение длины столба
+					br
+					| воздуха в инструменте, достигаемое с помощью кулисы
+
+
+
+			+e.footer
+				+link-arrow
+
+				+e.wrap-buttons
+					+e.button-video
+						+button._type_video
+					+button({audio: 'assets/audio/instruments/Trombon.mp3'})

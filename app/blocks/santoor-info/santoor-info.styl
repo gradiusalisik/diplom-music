@@ -1,23 +1,22 @@
-.tabla
-	padding-top 32px
+.santoor-info
+	padding-top 35px
 	overflow hidden
 	background-image url('../images/bg-instruments.jpg')
 	background-size cover
 
-	&__wrap-title
-		display flex
-		justify-content center
-
 	&__title
 		text-align center
 
-	&__image-wrap
+	&__text
 		margin-top 30px
-		text-align center
 
-	&__image
-		width 462px
-		height 308px
+	&__link
+		text-decoration none
+		color #fff
+		transition color .3s
+
+		&:hover
+			color rgba(#fff, .8)
 
 	&__footer
 		position absolute
@@ -27,6 +26,3 @@
 		justify-content space-between
 		align-items flex-end
 		width 100%
-
-	&__button-video
-		margin-bottom 30px

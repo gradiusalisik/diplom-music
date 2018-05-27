@@ -1,2 +1,38 @@
 .santoor
-	display block
+	padding-top 32px
+	overflow hidden
+	background-image url('../images/bg-instruments.jpg')
+	background-size cover
+
+	&__title
+		text-align center
+
+	&__image
+		margin-top 40px
+		width 860px
+		height 250px
+
+	&__info
+		margin-x auto
+		margin-top 15px
+		display block
+		size 48px
+		background-image url('../images/button/info.png')
+
+		&:hover
+			background-image url('../images/button/info_hover.png')
+
+	&__footer
+		position absolute
+		left 0
+		bottom 70px
+		display flex
+		justify-content space-between
+		align-items flex-end
+		width 100%
+
+	&__wrap-buttons
+		display flex
+
+	&__button-video
+		margin-right 30px

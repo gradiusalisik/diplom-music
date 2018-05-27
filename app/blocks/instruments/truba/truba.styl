@@ -1,2 +1,35 @@
 .truba
-	display block
+	padding-top 32px
+	overflow hidden
+	background-image url('../images/bg-instruments.jpg')
+	background-size cover
+
+	&__wrap-title
+		display flex
+		justify-content center
+
+	&__title
+		text-align center
+
+	&__text
+		&_right
+			text-align right
+
+	&__image
+		position absolute
+		top -32px
+		left -32px
+		width 460px
+		height 358px
+
+	&__footer
+		position absolute
+		left 0
+		bottom 70px
+		display flex
+		justify-content space-between
+		flex-direction column-reverse
+		width 100%
+
+	&__button-audio
+		margin-bottom 90px
