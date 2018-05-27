@@ -9,7 +9,6 @@ mixin conductor()
 				+e('video').video.js-main-video(loop autoplay)
 					+e('source').source(src='assets/video/conductor.mp4' type='video/mp4')
 
-
 				+e.instrument._piano.js-conductor-instruments
 					+e('audio').audio.js-conductor-audio(autoplay loop)
 						+e('source').source(src='assets/audio/conductor/piano.mp3' type='audio/mpeg')
@@ -50,7 +49,6 @@ mixin conductor()
 					+e.instrument._deedjereedoo.js-conductor-instruments
 						+e('audio').audio.js-conductor-audio(autoplay loop)
 							+e('source').source(src='assets/audio/conductor/deedjereedoo.mp3' type='audio/mpeg')
-
 
 				+e.footer
 					+link-arrow({href: 'main.html'})
