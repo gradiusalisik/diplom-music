@@ -1,2 +1,42 @@
 .tuba
-	display block
+	padding-top 32px
+	overflow hidden
+	background-image url('../images/bg-instruments.jpg')
+	background-size cover
+
+	&__wrap-title
+		display flex
+		justify-content center
+
+	&__title
+		margin-bottom 25px
+		text-align center
+
+	&__text
+		&_right
+			text-align right
+
+	&__wrap-image
+		position absolute
+		top 68px
+		left 0
+
+	&__image
+		display block
+		&_first
+			margin-bottom 25px
+			width 301px
+			height 187px
+
+		&_second
+			width 317px
+			height 185px
+
+	&__footer
+		position absolute
+		left 0
+		bottom 70px
+		display flex
+		justify-content space-between
+		align-items flex-end
+		width 100%

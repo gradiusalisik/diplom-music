@@ -1,3 +1,23 @@
+include /blocks/container/container
+include /blocks/link-arrow/link-arrow
+include /blocks/button/button
+include /blocks/title/title
+include /blocks/text/text
+
 mixin violonchel()
 	+b.violonchel&attributes(attributes)
-		block
+		+container
+			+title.violonchel__title ВИОЛОНЧЕЛЬ
+
+			+e.wrapper
+				+text._size_small-big.violonchel__text
+					| Инструмент басового и тенорового регистра, известный с первой половины XVI века.
+
+				+text._size_small-big.violonchel__text
+					| Звук сочный, певучий и напряжённый, в верхнем регистре слегка сдавленный. Такого же строения, что и скрипка, однако значительно больших размеров. На виолончели играют сидя, ставя её перед собой и упирая в пол особой ножкой с остриём
+
+			+e('img').image(src='assets/images/instruments/violonchel.png')
+
+			+e.footer
+				+link-arrow
+				+button({audio: 'assets/audio/instruments/violon4el.mp3'})

@@ -6,12 +6,12 @@ include /blocks/text/text
 
 mixin tabla()
 	+b.tabla&attributes(attributes)
-		+e('audio').audio.js-duduk-audio(autoplay)
+		+e('audio').audio.js-tabla-audio(autoplay)
 			+e('source').source(src='assets/audio/text/tabla.mp3' type='audio/mpeg')
 
 		+container
 			+e.wrapper
-				+title.duduk__title Табла
+				+title.tabla__title Табла
 
 				+text._size_small-big
 					| Точно о происхождении табла неясно. Но по существующей традиции создание этого инструмента (как и многого другого, чье происхождение неизвестно) приписывают Амиру Хусро (XIII в.).

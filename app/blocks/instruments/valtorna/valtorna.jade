@@ -1,3 +1,25 @@
+include /blocks/container/container
+include /blocks/link-arrow/link-arrow
+include /blocks/button/button
+include /blocks/title/title
+include /blocks/text/text
+
 mixin valtorna()
 	+b.valtorna&attributes(attributes)
-		block
+		+container
+			+title.valtorna__title Валторна
+
+			+e.wrapper
+				+e.wrap-image
+					+e('img').image(src='assets/images/instruments/valtorna.png')
+
+				+text.valtorna__text
+					| Произошла от охотничьего сигнального рога, в оркестр вошла в середине XVII века.
+					br
+					| До 1830-х годов, подобно другим медным инструментам, не имела вентилей и была натуральным инструментом с ограниченным звукорядом.
+					br
+					| Валторне хорошо удаётся исполнение длинных нот (в том числе на органном пункте) и мелодий широкого дыхания. Расход воздуха на этом инструменте относительно невелик (не считая крайних регистров).
+
+			+e.footer
+				+link-arrow
+				+button({audio: 'assets/audio/instruments/Valtorna.mp3'})
