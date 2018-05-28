@@ -6,8 +6,8 @@ include /blocks/text/text
 include /blocks/popup/popup
 
 mixin santoor()
-	+b.santoor&attributes(attributes)
-		+e('audio').audio.js-santoor-audio(autoplay)
+	+b.santoor.pages&attributes(attributes)
+		+e('audio').audio.js-audio-layout(autoplay)
 			+e('source').source(src='assets/audio/text/santur.mp3' type='audio/mpeg')
 
 		+container

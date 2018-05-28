@@ -6,7 +6,7 @@ include /blocks/text/text
 include /blocks/popup/popup
 
 mixin arfa()
-	+b.arfa&attributes(attributes)
+	+b.arfa.pages&attributes(attributes)
 		+container
 			+e.wrapper
 				+title Арфа
@@ -26,7 +26,7 @@ mixin arfa()
 			+e('img').image(src='assets/images/instruments/arfa.png')
 
 			+e.footer
-				+link-arrow
+				+link-arrow({href: 'main.html'})
 				+e.button-video
 					+button({type: 'video', popup: 'arfa'})
 				+button({audio: 'assets/audio/instruments/skripka.mp3'})

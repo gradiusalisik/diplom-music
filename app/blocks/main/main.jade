@@ -2,7 +2,7 @@ include /blocks/container/container
 include /blocks/text/text
 
 mixin main()
-	+b.main&attributes(attributes)&attributes({class: 'js-main'})
+	+b.main.pages&attributes(attributes)&attributes({class: 'js-main'})
 		+e('audio').audio.js-main-audio(autoplay loop)
 			+e('source').source(src='assets/audio/main/main.mp3' type='audio/mpeg')
 
@@ -19,7 +19,7 @@ mixin main()
 
 			+e.text._woodwinds
 				+text._uppercase._fontgrotesk._color_dark._size_big ДЕРЕВЯННО-ДУХОВЫЕ
-				+e('a').info(href='oodwinds.html')
+				+e('a').info(href='woodwinds.html')
 
 			+e.text._cooperwinds
 				+text._uppercase._fontgrotesk._color_dark._size_big МЕДНО-ДУХОВЫЕ

@@ -6,8 +6,8 @@ include /blocks/text/text
 include /blocks/popup/popup
 
 mixin duduk()
-	+b.duduk&attributes(attributes)&attributes({class: 'js-duduk'})
-		+e('audio').audio.js-duduk-audio(autoplay)
+	+b.duduk.pages&attributes(attributes)&attributes({class: 'js-duduk'})
+		+e('audio').audio.js-audio-layout(autoplay)
 			+e('source').source(src='assets/audio/text/duduk.mp3' type='audio/mpeg')
 
 		+container

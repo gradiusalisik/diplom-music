@@ -8,7 +8,8 @@ export default class {
 			dom: {
 				open: '.js-popup-open',
 				close: '.js-popup-close',
-				player: '.js-video-player'
+				player: '.js-video-player',
+				audio: '.js-audio-layout'
 			},
 			classes: {
 				active: 'popup_state_active'
@@ -29,6 +30,7 @@ export default class {
 		this.$open = this.$page.find(this.options.dom.open);
 		this.$close = this.$el.find(this.options.dom.close);
 		this.$player = this.$el.find(this.options.dom.player);
+		this.$audio = this.$page.find(this.options.dom.audio);
 
 		return this;
 	}
@@ -39,6 +41,7 @@ export default class {
 		const $targetPopup = this.$el.filter(`[id=${popupId}]`);
 
 		$targetPopup.addClass(this.options.classes.active);
+		this.$audio[0].pause();
 		this.youTubePlayer($targetPopup);
 	}
 
@@ -47,6 +50,7 @@ export default class {
 		const $target = $(e.currentTarget);
 		const $el = $target.closest(this.$el);
 		$el.removeClass(this.options.classes.active);
+		this.$audio[0].play();
 		this.stopVideo();
 	}
 

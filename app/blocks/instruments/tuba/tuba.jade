@@ -5,7 +5,7 @@ include /blocks/title/title
 include /blocks/text/text
 
 mixin tuba()
-	+b.tuba&attributes(attributes)
+	+b.tuba.pages&attributes(attributes)
 		+container
 			+e.wrap-image
 				+e('img').image._first(src='assets/images/instruments/tuba1.png')

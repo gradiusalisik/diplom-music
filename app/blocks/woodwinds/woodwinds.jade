@@ -4,7 +4,7 @@ include /blocks/link-arrow/link-arrow
 include /blocks/link-instruments/link-instruments
 
 mixin woodwinds()
-	+b.woodwinds&attributes(attributes)
+	+b.woodwinds.pages&attributes(attributes)
 		+container
 			+title._fontWeight_medium._color_light.woodwinds__title ДУХОВЫЕ деревянные
 			+e.wrap
@@ -36,4 +36,4 @@ mixin woodwinds()
 				}).woodwinds__link
 
 			+e.footer
-				+link-arrow
+				+link-arrow({href: 'main.html'})

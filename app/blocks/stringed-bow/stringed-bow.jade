@@ -4,7 +4,7 @@ include /blocks/link-arrow/link-arrow
 include /blocks/link-instruments/link-instruments
 
 mixin stringed-bow()
-	+b.stringed-bow&attributes(attributes)
+	+b.stringed-bow.pages&attributes(attributes)
 		+container
 			+title._fontWeight_medium._color_light.stringed-bow__title СТРУННО-СМЫЧКОВЫЕ
 			+e.wrap
@@ -32,4 +32,4 @@ mixin stringed-bow()
 				}).stringed-bow__link
 
 			+e.footer
-				+link-arrow
+				+link-arrow({href: 'main.html'})

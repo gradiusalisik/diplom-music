@@ -5,7 +5,7 @@ include /blocks/title/title
 include /blocks/text/text
 
 mixin skripka-alt()
-	+b.skripka-alt&attributes(attributes)&attributes({class: 'js-skripka-alt'})
+	+b.skripka-alt.pages&attributes(attributes)&attributes({class: 'js-skripka-alt'})
 		+container
 			+e.wrapper
 				+e.wrap-title
