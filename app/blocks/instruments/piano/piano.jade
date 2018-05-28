@@ -3,6 +3,7 @@ include /blocks/link-arrow/link-arrow
 include /blocks/button/button
 include /blocks/title/title
 include /blocks/text/text
+include /blocks/popup/popup
 
 mixin piano()
 	+b.piano&attributes(attributes)
@@ -12,7 +13,7 @@ mixin piano()
 
 				+e.wrap
 					+e.button-video
-						+button._type_video
+						+button({type: 'video', popup: 'piano'})
 
 					+e('img').image(src='assets/images/instruments/piano.png')
 
@@ -33,3 +34,5 @@ mixin piano()
 				+e.wrap-buttons
 					+e.button-audio
 						+button({audio: 'assets/audio/instruments/piano.mp3'})
+
+		+popup({id: 'piano'})

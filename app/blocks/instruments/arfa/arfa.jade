@@ -3,6 +3,7 @@ include /blocks/link-arrow/link-arrow
 include /blocks/button/button
 include /blocks/title/title
 include /blocks/text/text
+include /blocks/popup/popup
 
 mixin arfa()
 	+b.arfa&attributes(attributes)
@@ -27,5 +28,7 @@ mixin arfa()
 			+e.footer
 				+link-arrow
 				+e.button-video
-					+button({type: 'video'})
+					+button({type: 'video', popup: 'arfa'})
 				+button({audio: 'assets/audio/instruments/skripka.mp3'})
+
+		+popup({id: 'arfa'})

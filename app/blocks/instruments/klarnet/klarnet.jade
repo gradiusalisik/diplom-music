@@ -3,6 +3,7 @@ include /blocks/link-arrow/link-arrow
 include /blocks/button/button
 include /blocks/title/title
 include /blocks/text/text
+include /blocks/popup/popup
 
 mixin klarnet()
 	+b.klarnet&attributes(attributes)
@@ -33,5 +34,7 @@ mixin klarnet()
 
 				+e.wrap-buttons
 					+e.button-video
-						+button._type_video
+						+button({type: 'video', popup: 'klarnet'})
 					+button({audio: 'assets/audio/instruments/Goboy.mp3'})
+
+		+popup({id: 'klarnet'})

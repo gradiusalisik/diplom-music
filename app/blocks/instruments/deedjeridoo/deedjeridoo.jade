@@ -3,6 +3,7 @@ include /blocks/link-arrow/link-arrow
 include /blocks/button/button
 include /blocks/title/title
 include /blocks/text/text
+include /blocks/popup/popup
 
 mixin deedjeridoo()
 	+b.deedjeridoo&attributes(attributes)&attributes({class: 'js-deedjeridoo'})
@@ -43,5 +44,7 @@ mixin deedjeridoo()
 
 				+e.wrap-buttons
 					+e.button-video
-						+button._type_video
+						+button({popup: 'deedjeridoo', type: 'video'})
 					+button({audio: 'assets/audio/instruments/Didjeridoo.mp3'})
+
+	+popup({id: 'deedjeridoo'})

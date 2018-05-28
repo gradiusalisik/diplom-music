@@ -1,0 +1,9 @@
+include ../video/video
+
+mixin popup(data)
+	- data = data || {};
+
+	+b.popup(id=data.id)&attributes(attributes)&attributes({class: 'js-popup'})
+		+e.content
+			+e.close.js-popup-close
+			+video

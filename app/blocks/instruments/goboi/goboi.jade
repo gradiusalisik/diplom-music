@@ -3,6 +3,7 @@ include /blocks/link-arrow/link-arrow
 include /blocks/button/button
 include /blocks/title/title
 include /blocks/text/text
+include /blocks/popup/popup
 
 mixin goboi()
 	+b.goboi&attributes(attributes)
@@ -27,5 +28,7 @@ mixin goboi()
 
 				+e.wrap-buttons
 					+e.button-video
-						+button._type_video
+						+button({type: 'video', popup: 'goboe'})
 					+button({audio: 'assets/audio/instruments/Goboy.mp3'})
+
+		+popup({id: 'goboe'})

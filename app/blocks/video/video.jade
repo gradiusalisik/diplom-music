@@ -1,0 +1,9 @@
+mixin video(data)
+	- data = data || {};
+
+	+b.video.js-video&attributes(attributes)
+		+e.player(
+			data-youtube=data.youtubeId || 'VvYCKlkLhNQ'
+			class=data.load ? '_load' : ''
+			class='js-video-player'
+		)

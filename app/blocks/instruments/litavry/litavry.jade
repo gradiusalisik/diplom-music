@@ -3,6 +3,7 @@ include /blocks/link-arrow/link-arrow
 include /blocks/button/button
 include /blocks/title/title
 include /blocks/text/text
+include /blocks/popup/popup
 
 mixin litavry()
 	+b.litavry&attributes(attributes)&attributes({class: 'js-litavry'})
@@ -25,5 +26,7 @@ mixin litavry()
 
 				+e.wrap-buttons
 					+e.button-video
-						+button._type_video
+						+button({type: 'video', popup: 'litavry'})
 					+button({audio: 'assets/audio/instruments/Litavry.mp3'})
+
+		+popup({id: 'litavry'})

@@ -3,6 +3,7 @@ include /blocks/link-arrow/link-arrow
 include /blocks/button/button
 include /blocks/title/title
 include /blocks/text/text
+include /blocks/popup/popup
 
 mixin kontrabas()
 	+b.kontrabas&attributes(attributes)
@@ -23,5 +24,7 @@ mixin kontrabas()
 
 				+e.wrap-buttons
 					+e.button-video
-						+button._type_video
+						+button({type: 'video', popup: 'kontrabas'})
 					+button({audio: 'assets/audio/instruments/contra.mp3'})
+
+		+popup({id: 'kontrabas'})
