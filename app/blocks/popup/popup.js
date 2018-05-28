@@ -41,7 +41,9 @@ export default class {
 		const $targetPopup = this.$el.filter(`[id=${popupId}]`);
 
 		$targetPopup.addClass(this.options.classes.active);
-		this.$audio[0].pause();
+		if (this.$audio) {
+			this.$audio[0].pause();
+		}
 		this.youTubePlayer($targetPopup);
 	}
 
@@ -50,7 +52,9 @@ export default class {
 		const $target = $(e.currentTarget);
 		const $el = $target.closest(this.$el);
 		$el.removeClass(this.options.classes.active);
-		this.$audio[0].play();
+		if (this.$audio) {
+			this.$audio[0].play();
+		}
 		this.stopVideo();
 	}
 
