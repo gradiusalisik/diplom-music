@@ -6,18 +6,19 @@ include /blocks/text/text
 
 mixin violonchel()
 	+b.violonchel.pages&attributes(attributes)
-		+container
-			+title.violonchel__title ВИОЛОНЧЕЛЬ
+		+e.wrap.wrap
+			+container
+				+title.violonchel__title ВИОЛОНЧЕЛЬ
 
-			+e.wrapper
-				+text._size_small-big.violonchel__text
-					| Инструмент басового и тенорового регистра, известный с первой половины XVI века.
+				+e.wrapper
+					+text._size_small-big.violonchel__text
+						| Инструмент басового и тенорового регистра, известный с первой половины XVI века.
 
-				+text._size_small-big.violonchel__text
-					| Звук сочный, певучий и напряжённый, в верхнем регистре слегка сдавленный. Такого же строения, что и скрипка, однако значительно больших размеров. На виолончели играют сидя, ставя её перед собой и упирая в пол особой ножкой с остриём
+					+text._size_small-big.violonchel__text
+						| Звук сочный, певучий и напряжённый, в верхнем регистре слегка сдавленный. Такого же строения, что и скрипка, однако значительно больших размеров. На виолончели играют сидя, ставя её перед собой и упирая в пол особой ножкой с остриём
 
-			+e('img').image(src='assets/images/instruments/violonchel.png')
+				+e('img').image(src='assets/images/instruments/violonchel.png')
 
-			+e.footer
-				+link-arrow({href: 'stringed-bow.html'})
-				+button({audio: 'assets/audio/instruments/violon4el.mp3'})
+				+e.footer
+					+link-arrow({href: 'stringed-bow.html'})
+					+button({audio: 'assets/audio/instruments/violon4el.mp3'})

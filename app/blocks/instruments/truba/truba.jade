@@ -6,45 +6,46 @@ include /blocks/text/text
 
 mixin truba()
 	+b.truba.pages&attributes(attributes)
-		+container
-			+e('img').image(src='assets/images/instruments/truba.png')
+		+e.wrap.wrap
+			+container
+				+e('img').image(src='assets/images/instruments/truba.png')
 
-			+e.wrapper
-				+title.truba__title Труба
+				+e.wrapper
+					+title.truba__title Труба
 
-				+text._size_very-big.truba__text.truba__text_right
-					| Духовой медный инструмент
-					br
-					| альтово-сопранового регистра,
-					br
-					| самый высокий по звучанию
-					br
-					| среди медных духовых.
+					+text._size_very-big.truba__text.truba__text_right
+						| Духовой медный инструмент
+						br
+						| альтово-сопранового регистра,
+						br
+						| самый высокий по звучанию
+						br
+						| среди медных духовых.
 
-				+text._size_small-big.truba__text.truba__text_right
-					| В качестве сигнального инструмента использовалась c
-					br
-					| древнейших времён, примерно с XVII века вошла в состав
-					br
-					| оркестра. С изобретением механизма вентилей труба получила
-					br
-					| полный хроматический звукоряд и с середины XIX века стала
-					br
-					| полноценным инструментом классической музыки.
+					+text._size_small-big.truba__text.truba__text_right
+						| В качестве сигнального инструмента использовалась c
+						br
+						| древнейших времён, примерно с XVII века вошла в состав
+						br
+						| оркестра. С изобретением механизма вентилей труба получила
+						br
+						| полный хроматический звукоряд и с середины XIX века стала
+						br
+						| полноценным инструментом классической музыки.
 
-				+text.truba__text.truba__text_right
-					| В наше время  широко используется как сольный инструмент,
-					br
-					| в симфоническом оркестре, в джазе, фанке, ска и других жанрах.
-					br
-					| Среди выдающихся сольных трубачей различных жанров:
-					br
-					| Морис Андре, Луи Армстронг, Диззи Гиллеспи, Тимофей Докшицер,
-					br
-					| Майлз Дэвис, Уинтон Марсалис, Сергей Накаряков.
+					+text.truba__text.truba__text_right
+						| В наше время  широко используется как сольный инструмент,
+						br
+						| в симфоническом оркестре, в джазе, фанке, ска и других жанрах.
+						br
+						| Среди выдающихся сольных трубачей различных жанров:
+						br
+						| Морис Андре, Луи Армстронг, Диззи Гиллеспи, Тимофей Докшицер,
+						br
+						| Майлз Дэвис, Уинтон Марсалис, Сергей Накаряков.
 
-			+e.footer
-				+link-arrow({href: 'cooperwinds.html'})
+				+e.footer
+					+link-arrow({href: 'cooperwinds.html'})
 
-				+e.button-audio
-					+button({audio: 'assets/audio/instruments/Truba.mp3'})
+					+e.button-audio
+						+button({audio: 'assets/audio/instruments/Truba.mp3'})

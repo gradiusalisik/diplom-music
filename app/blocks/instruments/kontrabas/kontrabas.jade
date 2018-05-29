@@ -7,24 +7,25 @@ include /blocks/popup/popup
 
 mixin kontrabas()
 	+b.kontrabas.pages&attributes(attributes)
-		+container
-			+e.wrapper
-				+title.kontrabas__title КОНТРАБАС
+		+e.wrap.wrap
+			+container
+				+e.wrapper
+					+title.kontrabas__title КОНТРАБАС
 
-				+text._size_small-big.kontrabas__text
-					| Инструмент басового и тенорового регистра, известный с первой половины XVI века.
+					+text._size_small-big.kontrabas__text
+						| Инструмент басового и тенорового регистра, известный с первой половины XVI века.
 
-				+text._size_small-big.kontrabas__text
-					| Звук сочный, певучий и напряжённый, в верхнем регистре слегка сдавленный. Такого же строения, что и скрипка, однако значительно больших размеров. На виолончели играют сидя, ставя её перед собой и упирая в пол особой ножкой с остриём
+					+text._size_small-big.kontrabas__text
+						| Звук сочный, певучий и напряжённый, в верхнем регистре слегка сдавленный. Такого же строения, что и скрипка, однако значительно больших размеров. На виолончели играют сидя, ставя её перед собой и упирая в пол особой ножкой с остриём
 
-			+e('img').image(src='assets/images/instruments/kontrabas.png')
+				+e('img').image(src='assets/images/instruments/kontrabas.png')
 
-			+e.footer
-				+link-arrow({href: 'stringed-bow.html'})
+				+e.footer
+					+link-arrow({href: 'stringed-bow.html'})
 
-				+e.wrap-buttons
-					+e.button-video
-						+button({type: 'video', popup: 'kontrabas'})
-					+button({audio: 'assets/audio/instruments/contra.mp3'})
+					+e.wrap-buttons
+						+e.button-video
+							+button({type: 'video', popup: 'kontrabas'})
+						+button({audio: 'assets/audio/instruments/contra.mp3'})
 
 		+popup({id: 'kontrabas'})

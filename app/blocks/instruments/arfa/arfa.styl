@@ -1,6 +1,8 @@
 .arfa
-	background-image url('../images/bg-instruments.jpg')
-	background-size cover
+	&__wrap
+		background-image url('../images/bg-instruments.jpg')
+		background-size cover
+
 
 	&__wrapper
 		max-width 460px
@@ -13,18 +15,17 @@
 		&:hover
 			color rgba(#fff, .8)
 
-
 	&__image
 		position absolute
 		right 26px
-		bottom 35px
+		bottom 0
 		width 346px
 		height 616px
 
 	&__footer
 		position absolute
 		left 0
-		bottom 70px
+		bottom 35px
 		display flex
 		justify-content space-between
 		align-items flex-end

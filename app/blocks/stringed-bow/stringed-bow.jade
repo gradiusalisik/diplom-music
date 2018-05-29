@@ -5,31 +5,32 @@ include /blocks/link-instruments/link-instruments
 
 mixin stringed-bow()
 	+b.stringed-bow.pages&attributes(attributes)
-		+container
-			+title._fontWeight_medium._color_light.stringed-bow__title СТРУННО-СМЫЧКОВЫЕ
-			+e.wrap
-				+link-instruments({
-					type: 'wood',
-					href: 'skripka-alt.html',
-					title: 'СКРИПКА и АЛЬТ',
-					size: 'small',
-					notUppercase: true,
-					image: 'assets/images/group-instruments/stringed-bow/violin_alt.png'
-				}).stringed-bow__link
-				+link-instruments({
-					type: 'wood',
-					href: 'kontrabas.html',
-					title: 'Контрабас',
-					size: 'big',
-					reverse: 'column',
-					image: 'assets/images/group-instruments/stringed-bow/contrabas.png'
-				}).stringed-bow__link.stringed-bow__link_second
-				+link-instruments({
-					type: 'wood',
-					href: 'violonchel.html',
-					title: 'Виолончель',
-					image: 'assets/images/group-instruments/stringed-bow/viola.png'
-				}).stringed-bow__link
+		+e.wrap-head.wrap
+			+container
+				+title._fontWeight_medium._color_light.stringed-bow__title СТРУННО-СМЫЧКОВЫЕ
+				+e.wrap
+					+link-instruments({
+						type: 'wood',
+						href: 'skripka-alt.html',
+						title: 'СКРИПКА и АЛЬТ',
+						size: 'small',
+						notUppercase: true,
+						image: 'assets/images/group-instruments/stringed-bow/violin_alt.png'
+					}).stringed-bow__link
+					+link-instruments({
+						type: 'wood',
+						href: 'kontrabas.html',
+						title: 'Контрабас',
+						size: 'big',
+						reverse: 'column',
+						image: 'assets/images/group-instruments/stringed-bow/contrabas.png'
+					}).stringed-bow__link.stringed-bow__link_second
+					+link-instruments({
+						type: 'wood',
+						href: 'violonchel.html',
+						title: 'Виолончель',
+						image: 'assets/images/group-instruments/stringed-bow/viola.png'
+					}).stringed-bow__link
 
-			+e.footer
-				+link-arrow({href: 'main.html'})
+				+e.footer
+					+link-arrow({href: 'main.html'})

@@ -3,7 +3,7 @@ include /blocks/link-arrow/link-arrow
 
 mixin conductor()
 	+b.conductor.pages&attributes(attributes)&attributes({class: 'js-conductor'})
-		+container.container_type_main
+		+container.container_type_big
 			+e.wrap
 				+e('h1').title НАЖМИ НА ИНСТРУМЕНТ/ГРУППУ ЧТОБЫ ОТКЛЮЧИТЬ
 				+e('video').video.js-main-video(loop autoplay)

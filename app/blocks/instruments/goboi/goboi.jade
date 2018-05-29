@@ -7,28 +7,29 @@ include /blocks/popup/popup
 
 mixin goboi()
 	+b.goboi.pages&attributes(attributes)
-		+container
-			+e.wrapper
-				+title.goboi__title Гобой
+		+e.wrap.wrap
+			+container
+				+e.wrapper
+					+title.goboi__title Гобой
 
-				+text.goboi__text
-					| Инструмент сопранового регистра, представляющий собой трубку конической формы с системой клапанов и двойной тростью (язычком). Инструмент обладает певучим, однако несколько гнусавым, а в верхнем регистре — резким тембром.
-					br
-					| Современный вид гобой приобрёл в первой половине XVIII века.
+					+text.goboi__text
+						| Инструмент сопранового регистра, представляющий собой трубку конической формы с системой клапанов и двойной тростью (язычком). Инструмент обладает певучим, однако несколько гнусавым, а в верхнем регистре — резким тембром.
+						br
+						| Современный вид гобой приобрёл в первой половине XVIII века.
 
-				+text.goboi__text
-					| Основу репертуара для гобоя составляют
-					a.goboi__link(href=jv0) произведения эпохи барокко
-					| &nbsp;(сочинения Баха и его современников) и классицизма (Моцарт). Реже исполняются сочинения композиторов-романтиков (Шумана) и современных композиторов.
+					+text.goboi__text
+						| Основу репертуара для гобоя составляют
+						a.goboi__link(href=jv0) произведения эпохи барокко
+						| &nbsp;(сочинения Баха и его современников) и классицизма (Моцарт). Реже исполняются сочинения композиторов-романтиков (Шумана) и современных композиторов.
 
-			+e('img').image(src='assets/images/instruments/goboe.png')
+				+e('img').image(src='assets/images/instruments/goboe.png')
 
-			+e.footer
-				+link-arrow({href: 'woodwinds.html'})
+				+e.footer
+					+link-arrow({href: 'woodwinds.html'})
 
-				+e.wrap-buttons
-					+e.button-video
-						+button({type: 'video', popup: 'goboe'})
-					+button({audio: 'assets/audio/instruments/Goboy.mp3'})
+					+e.wrap-buttons
+						+e.button-video
+							+button({type: 'video', popup: 'goboe'})
+						+button({audio: 'assets/audio/instruments/Goboy.mp3'})
 
 		+popup({id: 'goboe'})

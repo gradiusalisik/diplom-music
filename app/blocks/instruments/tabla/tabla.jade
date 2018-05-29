@@ -10,25 +10,26 @@ mixin tabla()
 		+e('audio').audio.js-audio-layout(autoplay)
 			+e('source').source(src='assets/audio/text/tabla.mp3' type='audio/mpeg')
 
-		+container
-			+e.wrapper
-				+title.tabla__title Табла
+		+e.wrap.wrap
+			+container
+				+e.wrapper
+					+title.tabla__title Табла
 
-				+text._size_small-big
-					| Точно о происхождении табла неясно. Но по существующей традиции создание этого инструмента (как и многого другого, чье происхождение неизвестно) приписывают Амиру Хусро (XIII в.).
+					+text._size_small-big
+						| Точно о происхождении табла неясно. Но по существующей традиции создание этого инструмента (как и многого другого, чье происхождение неизвестно) приписывают Амиру Хусро (XIII в.).
 
-				+text._size_small-big
-					| Большой барабан называется — байна, маленький — дайна.
+					+text._size_small-big
+						| Большой барабан называется — байна, маленький — дайна.
 
-			+e.image-wrap
-				+e('img').image(src='assets/images/instruments/tabla.png')
+				+e.image-wrap
+					+e('img').image(src='assets/images/instruments/tabla.png')
 
-			+e.footer
-				+link-arrow({href: 'main.html'})
+				+e.footer
+					+link-arrow({href: 'main.html'})
 
-				+e.wrap-buttons
-					+e.button-video
-						+button({type: 'video', popup: 'tabla'})
-					+button({audio: 'assets/audio/instruments/Tabla.mp3'})
+					+e.wrap-buttons
+						+e.button-video
+							+button({type: 'video', popup: 'tabla'})
+						+button({audio: 'assets/audio/instruments/Tabla.mp3'})
 
 		+popup({id: 'tabla'})

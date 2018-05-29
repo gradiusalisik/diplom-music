@@ -10,41 +10,42 @@ mixin deedjeridoo()
 		+e('audio').audio.js-audio-layout(autoplay)
 			+e('source').source(src='assets/audio/text/dijeridoo.mp3' type='audio/mpeg')
 
-		+container
-			+e.wrapper
-				+title.deedjeridoo__title ДИДЖЕРИДУ
+		+e.wrap.wrap
+			+container
+				+e.wrapper
+					+title.deedjeridoo__title ДИДЖЕРИДУ
 
-				+text
-					| Древнейший духовой деревянный музыкальный инструмент аборигенов северной Австралии. Один из самых древних музыкальных инструментов на Земле.
+					+text
+						| Древнейший духовой деревянный музыкальный инструмент аборигенов северной Австралии. Один из самых древних музыкальных инструментов на Земле.
 
-				+text
-					| Диджериду – европейско-американское название древнейшего музыкального
-					br
-					| инструмента аборигенов Австралии. На севере Австралии, где появилась
-					br
-					| диджериду, её называют йедаки (yidaki).
+					+text
+						| Диджериду – европейско-американское название древнейшего музыкального
+						br
+						| инструмента аборигенов Австралии. На севере Австралии, где появилась
+						br
+						| диджериду, её называют йедаки (yidaki).
 
-				+text
-					| Диджериду нерукотворна, её создает сама природа: из куска
-					br
-					| ствола эвкалипта длиной 1-3 метра, сердцевина которого
-					br
-					| выедена термитами. Нужно лишь отыскать эти «заготовки» и
-					br
-					| диджериду почти готова.
-				+text
-					| После того как подходящий ствол будет найден,
-					br
-					| его конец обрабатывают пчелиным воском.
+					+text
+						| Диджериду нерукотворна, её создает сама природа: из куска
+						br
+						| ствола эвкалипта длиной 1-3 метра, сердцевина которого
+						br
+						| выедена термитами. Нужно лишь отыскать эти «заготовки» и
+						br
+						| диджериду почти готова.
+					+text
+						| После того как подходящий ствол будет найден,
+						br
+						| его конец обрабатывают пчелиным воском.
 
-			+e('img').image(src='assets/images/instruments/deedjeridoo.png')
+				+e('img').image(src='assets/images/instruments/deedjeridoo.png')
 
-			+e.footer
-				+link-arrow({href: 'main.html'})
+				+e.footer
+					+link-arrow({href: 'main.html'})
 
-				+e.wrap-buttons
-					+e.button-video
-						+button({popup: 'deedjeridoo', type: 'video'})
-					+button({audio: 'assets/audio/instruments/Didjeridoo.mp3'})
+					+e.wrap-buttons
+						+e.button-video
+							+button({popup: 'deedjeridoo', type: 'video'})
+						+button({audio: 'assets/audio/instruments/Didjeridoo.mp3'})
 
 	+popup({id: 'deedjeridoo'})

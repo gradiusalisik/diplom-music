@@ -6,40 +6,41 @@ include /blocks/text/text
 
 mixin tuba()
 	+b.tuba.pages&attributes(attributes)
-		+container
-			+e.wrap-image
-				+e('img').image._first(src='assets/images/instruments/tuba1.png')
-				+e('img').image._second(src='assets/images/instruments/tuba2.png')
+		+e.wrap.wrap
+			+container
+				+e.wrap-image
+					+e('img').image._first(src='assets/images/instruments/tuba1.png')
+					+e('img').image._second(src='assets/images/instruments/tuba2.png')
 
-			+e.wrapper
-				+title.tuba__title Туба
+				+e.wrapper
+					+title.tuba__title Туба
 
-				+text.tuba__text.tuba__text_right
-					|  Широкомензурный духовой медный  инструмент, самый
-					br
-					| низкий по регистру.  Обладает суровым, массивным
-					br
-					| тембром, звук тубы трудноинтонируемый. Используется в
-					br
-					| основном в симфоническом оркестре, где ей принадлежит
-					br
-					| роль басового инструмента в группе медных духовых.
-					br
-					| Активно используется в духовых оркестрах, реже в
-					br
-					| джазовых и эстрадных ансамблях.
+					+text.tuba__text.tuba__text_right
+						|  Широкомензурный духовой медный  инструмент, самый
+						br
+						| низкий по регистру.  Обладает суровым, массивным
+						br
+						| тембром, звук тубы трудноинтонируемый. Используется в
+						br
+						| основном в симфоническом оркестре, где ей принадлежит
+						br
+						| роль басового инструмента в группе медных духовых.
+						br
+						| Активно используется в духовых оркестрах, реже в
+						br
+						| джазовых и эстрадных ансамблях.
 
-				+text.tuba__text.tuba__text_right
-					| В качестве сольного инструмента туба выступает
-					br
-					| сравнительно редко. Последнее пополнение
-					br
-					| классического состава  оркестра.
-					br
-					| С введением этого инструмента завершилось
-					br
-					| формирование симфонического оркестра.
+					+text.tuba__text.tuba__text_right
+						| В качестве сольного инструмента туба выступает
+						br
+						| сравнительно редко. Последнее пополнение
+						br
+						| классического состава  оркестра.
+						br
+						| С введением этого инструмента завершилось
+						br
+						| формирование симфонического оркестра.
 
-			+e.footer
-				+link-arrow({href: 'cooperwinds.html'})
-				+button({audio: 'assets/audio/instruments/Tuba.mp3'})
+				+e.footer
+					+link-arrow({href: 'cooperwinds.html'})
+					+button({audio: 'assets/audio/instruments/Tuba.mp3'})

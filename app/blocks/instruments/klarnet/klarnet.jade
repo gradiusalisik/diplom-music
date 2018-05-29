@@ -7,34 +7,35 @@ include /blocks/popup/popup
 
 mixin klarnet()
 	+b.klarnet.pages&attributes(attributes)
-		+container
-			+e.wrapper
-				+title.klarnet__title Кларнет
+		+e.wrap.wrap
+			+container
+				+e.wrapper
+					+title.klarnet__title Кларнет
 
-				+text.klarnet__text
-					| Духовой деревянный музыкальный инструмент с одинарной тростью.
-					br
-					| Был изобретён около 1700 года в Нюрнберге, в музыке активно используется со второй половины XVIII века.
+					+text.klarnet__text
+						| Духовой деревянный музыкальный инструмент с одинарной тростью.
+						br
+						| Был изобретён около 1700 года в Нюрнберге, в музыке активно используется со второй половины XVIII века.
 
-				+text.klarnet__text
-					| В современном симфоническом оркестре используется
-					br
-					|два (реже три или четыре) кларнета, при этом музыкант,
-					br
-					| играющий на последнем по номеру кларнете, может
-					br
-					| также (в соответствии с партитурой) исполнять партию
-					br
-					| малого кларнета или бас-кларнета.
+					+text.klarnet__text
+						| В современном симфоническом оркестре используется
+						br
+						|два (реже три или четыре) кларнета, при этом музыкант,
+						br
+						| играющий на последнем по номеру кларнете, может
+						br
+						| также (в соответствии с партитурой) исполнять партию
+						br
+						| малого кларнета или бас-кларнета.
 
-			+e('img').image(src='assets/images/instruments/klarnet.png')
+				+e('img').image(src='assets/images/instruments/klarnet.png')
 
-			+e.footer
-				+link-arrow({href: 'woodwinds.html'})
+				+e.footer
+					+link-arrow({href: 'woodwinds.html'})
 
-				+e.wrap-buttons
-					+e.button-video
-						+button({type: 'video', popup: 'klarnet'})
-					+button({audio: 'assets/audio/instruments/Clarnet.mp3'})
+					+e.wrap-buttons
+						+e.button-video
+							+button({type: 'video', popup: 'klarnet'})
+						+button({audio: 'assets/audio/instruments/Clarnet.mp3'})
 
 		+popup({id: 'klarnet'})

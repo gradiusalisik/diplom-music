@@ -10,20 +10,21 @@ mixin santoor()
 		+e('audio').audio.js-audio-layout(autoplay)
 			+e('source').source(src='assets/audio/text/santur.mp3' type='audio/mpeg')
 
-		+container
-			+e.wrapper
-				+title.santoor__title Сантур
+		+e.wrap.wrap
+			+container
+				+e.wrapper
+					+title.santoor__title Сантур
 
-				+e('img').image(src='assets/images/instruments/santoor.png')
+					+e('img').image(src='assets/images/instruments/santoor.png')
 
-				+e('a').info(href='santoor-info.html')
+					+e('a').info(href='santoor-info.html')
 
-			+e.footer
-				+link-arrow({href: 'main.html'})
+				+e.footer
+					+link-arrow({href: 'main.html'})
 
-				+e.wrap-buttons
-					+e.button-video
-						+button({type: 'video', popup: 'santoor'})
-					+button({audio: 'assets/audio/instruments/Santur.mp3'})
+					+e.wrap-buttons
+						+e.button-video
+							+button({type: 'video', popup: 'santoor'})
+						+button({audio: 'assets/audio/instruments/Santur.mp3'})
 
 		+popup({id: 'santoor'})

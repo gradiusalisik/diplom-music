@@ -6,20 +6,21 @@ include /blocks/text/text
 
 mixin valtorna()
 	+b.valtorna.pages&attributes(attributes)
-		+container
-			+title.valtorna__title Валторна
+		+e.wrap.wrap
+			+container
+				+title.valtorna__title Валторна
 
-			+e.wrapper
-				+e.wrap-image
-					+e('img').image(src='assets/images/instruments/valtorna.png')
+				+e.wrapper
+					+e.wrap-image
+						+e('img').image(src='assets/images/instruments/valtorna.png')
 
-				+text.valtorna__text
-					| Произошла от охотничьего сигнального рога, в оркестр вошла в середине XVII века.
-					br
-					| До 1830-х годов, подобно другим медным инструментам, не имела вентилей и была натуральным инструментом с ограниченным звукорядом.
-					br
-					| Валторне хорошо удаётся исполнение длинных нот (в том числе на органном пункте) и мелодий широкого дыхания. Расход воздуха на этом инструменте относительно невелик (не считая крайних регистров).
+					+text.valtorna__text
+						| Произошла от охотничьего сигнального рога, в оркестр вошла в середине XVII века.
+						br
+						| До 1830-х годов, подобно другим медным инструментам, не имела вентилей и была натуральным инструментом с ограниченным звукорядом.
+						br
+						| Валторне хорошо удаётся исполнение длинных нот (в том числе на органном пункте) и мелодий широкого дыхания. Расход воздуха на этом инструменте относительно невелик (не считая крайних регистров).
 
-			+e.footer
-				+link-arrow({href: 'cooperwinds.html'})
-				+button({audio: 'assets/audio/instruments/Valtorna.mp3'})
+				+e.footer
+					+link-arrow({href: 'cooperwinds.html'})
+					+button({audio: 'assets/audio/instruments/Valtorna.mp3'})

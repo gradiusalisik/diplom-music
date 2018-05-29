@@ -5,35 +5,36 @@ include /blocks/link-instruments/link-instruments
 
 mixin woodwinds()
 	+b.woodwinds.pages&attributes(attributes)
-		+container
-			+title._fontWeight_medium._color_light.woodwinds__title ДУХОВЫЕ деревянные
-			+e.wrap
-				+link-instruments({
-					type: 'wood',
-					href: 'klarnet.html',
-					title: 'Кларнет',
-					reverse: 'column',
-					image: 'assets/images/group-instruments/woodwinds/clarnet.png'
-				}).woodwinds__link
-				+link-instruments({
-					type: 'wood',
-					href: 'fleita.html',
-					title: 'Флейта',
-					image: 'assets/images/group-instruments/woodwinds/flute.png'
-				}).woodwinds__link
-				+link-instruments({
-					type: 'wood',
-					href: 'fagot.html',
-					title: 'Фагот',
-					image: 'assets/images/group-instruments/woodwinds/fagot.png'
-				}).woodwinds__link
-				+link-instruments({
-					type: 'wood',
-					href: 'goboi.html',
-					reverse: 'column',
-					title: 'Гобой',
-					image: 'assets/images/group-instruments/woodwinds/goboe.png'
-				}).woodwinds__link
+		+e.wrap-head.wrap
+			+container
+				+title._fontWeight_medium._color_light.woodwinds__title ДУХОВЫЕ деревянные
+				+e.wrap
+					+link-instruments({
+						type: 'wood',
+						href: 'klarnet.html',
+						title: 'Кларнет',
+						reverse: 'column',
+						image: 'assets/images/group-instruments/woodwinds/clarnet.png'
+					}).woodwinds__link
+					+link-instruments({
+						type: 'wood',
+						href: 'fleita.html',
+						title: 'Флейта',
+						image: 'assets/images/group-instruments/woodwinds/flute.png'
+					}).woodwinds__link
+					+link-instruments({
+						type: 'wood',
+						href: 'fagot.html',
+						title: 'Фагот',
+						image: 'assets/images/group-instruments/woodwinds/fagot.png'
+					}).woodwinds__link
+					+link-instruments({
+						type: 'wood',
+						href: 'goboi.html',
+						reverse: 'column',
+						title: 'Гобой',
+						image: 'assets/images/group-instruments/woodwinds/goboe.png'
+					}).woodwinds__link
 
-			+e.footer
-				+link-arrow({href: 'main.html'})
+				+e.footer
+					+link-arrow({href: 'main.html'})
