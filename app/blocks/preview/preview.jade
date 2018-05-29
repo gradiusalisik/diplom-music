@@ -1,0 +1,11 @@
+include /blocks/container/container
+include /blocks/link-arrow/link-arrow
+
+mixin preview()
+	+b.preview.pages&attributes(attributes)
+		+container.container_type_big
+			+e('video').video.js-main-video(autoplay controls)
+				+e('source').source(src='assets/video/main.mp4' type='video/mp4')
+
+			+e.footer
+				+link-arrow({href: 'main.html', type: 'next'})
