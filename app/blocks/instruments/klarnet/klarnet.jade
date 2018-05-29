@@ -28,14 +28,16 @@ mixin klarnet()
 						br
 						| малого кларнета или бас-кларнета.
 
-				+e('img').image(src='assets/images/instruments/klarnet.png')
+				+e.image-wrap
+					+e('img').image.js-image(src='assets/images/instruments/klarnet.png' data-zoom='assets/images/instruments/klarnet.png')
+					+e.zoom.zoom.js-for-zoom-photo
 
-				+e.footer
+				+e.link-arrow
 					+link-arrow({href: 'woodwinds.html'})
 
-					+e.wrap-buttons
-						+e.button-video
-							+button({type: 'video', popup: 'klarnet'})
-						+button({audio: 'assets/audio/instruments/Clarnet.mp3'})
+				+e.wrap-buttons
+					+e.button-video
+						+button({type: 'video', popup: 'klarnet'})
+					+button({audio: 'assets/audio/instruments/Clarnet.mp3'})
 
 		+popup({id: 'klarnet'})

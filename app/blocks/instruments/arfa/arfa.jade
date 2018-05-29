@@ -24,12 +24,17 @@ mixin arfa()
 						br
 						| Римского-Корсакова.
 
-				+e('img').image(src='assets/images/instruments/arfa.png')
+				+e.image-wrap
+					+e('img').image.js-image(src='assets/images/instruments/arfa.png' data-zoom='assets/images/instruments/arfa.png')
+					+e.zoom.zoom.js-for-zoom-photo
 
-				+e.footer
+				+e.link-arrow
 					+link-arrow({href: 'main.html'})
-					+e.button-video
-						+button({type: 'video', popup: 'arfa'})
+
+				+e.wrap-buttons
 					+button({audio: 'assets/audio/instruments/Arfa.mp3'})
+
+				+e.button-video
+					+button({type: 'video', popup: 'arfa'})
 
 		+popup({id: 'arfa'})

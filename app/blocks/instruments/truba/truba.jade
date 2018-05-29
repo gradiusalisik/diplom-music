@@ -8,7 +8,9 @@ mixin truba()
 	+b.truba.pages&attributes(attributes)
 		+e.wrap.wrap
 			+container
-				+e('img').image(src='assets/images/instruments/truba.png')
+				+e.image-wrap
+					+e('img').image.js-image(src='assets/images/instruments/truba.png' data-zoom='assets/images/instruments/truba.png')
+					+e.zoom.zoom.js-for-zoom-photo
 
 				+e.wrapper
 					+title.truba__title Труба

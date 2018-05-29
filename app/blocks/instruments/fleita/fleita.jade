@@ -12,7 +12,9 @@ mixin fleita()
 				+e.wrapper
 					+title.fleita__title Флейта
 
-					+e('img').image(src='assets/images/instruments/fleita.png')
+					+e.image-wrap
+						+e('img').image.js-image(src='assets/images/instruments/fleita.png' data-zoom='assets/images/instruments/fleita.png')
+						+e.zoom.zoom.js-for-zoom-photo
 
 					+text.fleita__text
 						| К группе деревянных инструментов относится, поскольку первоначально эти инструменты изготавливались из дерева.
@@ -28,12 +30,12 @@ mixin fleita()
 						br
 						| В XIX веке были популярны также инструменты из стекла и слоновой кости.
 
-				+e.footer
+				+e.link-arrow
 					+link-arrow({href: 'woodwinds.html'})
 
-					+e.wrap-buttons
-						+e.button-video
-							+button({type: 'video', popup: 'fleita'})
-						+button({audio: 'assets/audio/instruments/Fleyta.mp3'})
+				+e.wrap-buttons
+					+e.button-video
+						+button({type: 'video', popup: 'fleita'})
+					+button({audio: 'assets/audio/instruments/Fleyta.mp3'})
 
 		+popup({id: 'fleita'})

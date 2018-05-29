@@ -12,7 +12,8 @@ mixin valtorna()
 
 				+e.wrapper
 					+e.wrap-image
-						+e('img').image(src='assets/images/instruments/valtorna.png')
+						+e('img').image.js-image(src='assets/images/instruments/valtorna.png' data-zoom='assets/images/instruments/valtorna.png')
+						+e.zoom.zoom.js-for-zoom-photo
 
 					+text.valtorna__text
 						| Произошла от охотничьего сигнального рога, в оркестр вошла в середине XVII века.

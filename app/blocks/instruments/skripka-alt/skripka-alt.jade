@@ -22,8 +22,12 @@ mixin skripka-alt()
 						br
 						| Струны альта настроены на квинту ниже скрипичных и на октаву выше виолончельных — c, g, d1,a1 (до, соль малой октавы, ре, ля первой октавы). Приёмы игры на альте и штрихи — те же, что и на скрипке, но звук менее яркий, матовый, бархатистый, но слегка гнусавый.
 
-				+e('img').image(src='assets/images/instruments/skripka-alt.png')
+				+e.image-wrap
+					+e('img').image.js-image(src='assets/images/instruments/skripka-alt.png' data-zoom='assets/images/instruments/skripka-alt.png')
+					+e.zoom.zoom.js-for-zoom-photo
 
-				+e.footer
+				+e.link-arrow
 					+link-arrow({href: 'stringed-bow.html'})
+
+				+e.button-audio
 					+button({audio: 'assets/audio/instruments/skripka.mp3'})

@@ -22,14 +22,16 @@ mixin goboi()
 						a.goboi__link(href=jv0) произведения эпохи барокко
 						| &nbsp;(сочинения Баха и его современников) и классицизма (Моцарт). Реже исполняются сочинения композиторов-романтиков (Шумана) и современных композиторов.
 
-				+e('img').image(src='assets/images/instruments/goboe.png')
+				+e.image-wrap
+					+e('img').image.js-image(src='assets/images/instruments/goboe.png' data-zoom='assets/images/instruments/goboe.png')
+					+e.zoom.zoom.js-for-zoom-photo
 
-				+e.footer
+				+e.link-arrow
 					+link-arrow({href: 'woodwinds.html'})
 
-					+e.wrap-buttons
-						+e.button-video
-							+button({type: 'video', popup: 'goboe'})
-						+button({audio: 'assets/audio/instruments/Goboy.mp3'})
+				+e.wrap-buttons
+					+e.button-video
+						+button({type: 'video', popup: 'goboe'})
+					+button({audio: 'assets/audio/instruments/Goboy.mp3'})
 
 		+popup({id: 'goboe'})

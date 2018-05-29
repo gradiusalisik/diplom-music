@@ -22,14 +22,15 @@ mixin tabla()
 						| Большой барабан называется — байна, маленький — дайна.
 
 				+e.image-wrap
-					+e('img').image(src='assets/images/instruments/tabla.png')
+					+e('img').image.js-image(src='assets/images/instruments/tabla.png' data-zoom='assets/images/instruments/tabla.png')
+					+e.zoom.zoom.js-for-zoom-photo
 
-				+e.footer
+				+e.link-arrow
 					+link-arrow({href: 'main.html'})
 
-					+e.wrap-buttons
-						+e.button-video
-							+button({type: 'video', popup: 'tabla'})
-						+button({audio: 'assets/audio/instruments/Tabla.mp3'})
+				+e.wrap-buttons
+					+e.button-video
+						+button({type: 'video', popup: 'tabla'})
+					+button({audio: 'assets/audio/instruments/Tabla.mp3'})
 
 		+popup({id: 'tabla'})

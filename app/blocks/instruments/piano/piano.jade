@@ -16,7 +16,9 @@ mixin piano()
 						+e.button-video
 							+button({type: 'video', popup: 'piano'})
 
-						+e('img').image(src='assets/images/instruments/piano.png')
+						+e.image-wrap
+							+e('img').image.js-image(src='assets/images/instruments/piano.png' data-zoom='assets/images/instruments/piano.png')
+							+e.zoom.zoom.js-for-zoom-photo
 
 						+e.text
 							+text

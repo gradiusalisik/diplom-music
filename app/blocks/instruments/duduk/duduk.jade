@@ -44,14 +44,16 @@ mixin duduk()
 						br
 						| наиболее известен Алихан Самедов.
 
-					+e('img').image(src='assets/images/instruments/duduk.png')
+				+e.image-wrap
+					+e('img').image.js-image(src='assets/images/instruments/duduk.png' data-zoom='assets/images/instruments/duduk.png')
+					+e.zoom.zoom.js-for-zoom-photo
 
-				+e.footer
+				+e.link-arrow
 					+link-arrow({href: 'main.html'})
 
-					+e.wrap-buttons
-						+e.button-video
-							+button({type: 'video', popup: 'duduk'})
-						+button({audio: 'assets/audio/instruments/Duduk.mp3'})
+				+e.wrap-buttons
+					+e.button-video
+						+button({type: 'video', popup: 'duduk'})
+					+button({audio: 'assets/audio/instruments/Duduk.mp3'})
 
 		+popup({id: 'duduk'})

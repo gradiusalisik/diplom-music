@@ -38,14 +38,16 @@ mixin deedjeridoo()
 						br
 						| его конец обрабатывают пчелиным воском.
 
-				+e('img').image(src='assets/images/instruments/deedjeridoo.png')
+				+e.image-wrap
+					+e('img').image.js-image(src='assets/images/instruments/deedjeridoo.png' data-zoom='assets/images/instruments/deedjeridoo.png')
+					+e.zoom.zoom.js-for-zoom-photo
 
-				+e.footer
+				+e.link-arrow
 					+link-arrow({href: 'main.html'})
 
-					+e.wrap-buttons
-						+e.button-video
-							+button({popup: 'deedjeridoo', type: 'video'})
-						+button({audio: 'assets/audio/instruments/Didjeridoo.mp3'})
+				+e.wrap-buttons
+					+e.button-video
+						+button({popup: 'deedjeridoo', type: 'video'})
+					+button({audio: 'assets/audio/instruments/Didjeridoo.mp3'})
 
 	+popup({id: 'deedjeridoo'})

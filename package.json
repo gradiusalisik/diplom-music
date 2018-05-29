@@ -124,6 +124,7 @@
     "webpack-stream": "^3.1.0"
   },
   "dependencies": {
+    "drift-zoom": "^1.2.0",
     "youtube-player": "^5.5.0"
   }
 }

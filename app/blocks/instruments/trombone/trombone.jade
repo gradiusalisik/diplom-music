@@ -9,7 +9,9 @@ mixin trombone()
 	+b.trombone.pages&attributes(attributes)
 		+e.wrap.wrap
 			+container
-				+e('img').image(src='assets/images/instruments/trombon.png')
+				+e.image-wrap
+					+e('img').image.js-image(src='assets/images/instruments/trombon.png' data-zoom='assets/images/instruments/trombon.png')
+					+e.zoom.zoom.js-for-zoom-photo
 
 				+e.wrapper
 					+title.trombone__title Тромбон

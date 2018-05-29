@@ -18,7 +18,9 @@ mixin kontrabas()
 					+text._size_small-big.kontrabas__text
 						| Звук сочный, певучий и напряжённый, в верхнем регистре слегка сдавленный. Такого же строения, что и скрипка, однако значительно больших размеров. На виолончели играют сидя, ставя её перед собой и упирая в пол особой ножкой с остриём
 
-				+e('img').image(src='assets/images/instruments/kontrabas.png')
+				+e.image-wrap
+					+e('img').image.js-image(src='assets/images/instruments/kontrabas.png' data-zoom='assets/images/instruments/kontrabas.png')
+					+e.zoom.zoom.js-for-zoom-photo
 
 				+e.footer
 					+link-arrow({href: 'stringed-bow.html'})

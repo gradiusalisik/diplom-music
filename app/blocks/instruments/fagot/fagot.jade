@@ -31,14 +31,16 @@ mixin fagot()
 					+text._size_small.fagot__text
 						| Технике фагота более всего свойственны чередования мелодических фраз среднего дыхания с различными оттенками гаммообразных пассажей и арпеджио, преимущественно в стаккатном изложении и с применением разнообразных скачков.
 
-					+e('img').image(src='assets/images/instruments/fagot.png')
+				+e.image-wrap
+					+e('img').image.js-image(src='assets/images/instruments/fagot.png' data-zoom='assets/images/instruments/fagot.png')
+					+e.zoom.zoom.js-for-zoom-photo
 
-				+e.footer
+				+e.link-arrow
 					+link-arrow({href: 'woodwinds.html'})
 
-					+e.wrap-buttons
-						+e.button-video
-							+button({type: 'video', popup: 'fagot'})
-						+button({audio: 'assets/audio/instruments/Fagot.mp3'})
+				+e.wrap-buttons
+					+e.button-video
+						+button({type: 'video', popup: 'fagot'})
+					+button({audio: 'assets/audio/instruments/Fagot.mp3'})
 
 		+popup({id: 'fagot'})

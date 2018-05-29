@@ -9,8 +9,14 @@ mixin tuba()
 		+e.wrap.wrap
 			+container
 				+e.wrap-image
-					+e('img').image._first(src='assets/images/instruments/tuba1.png')
-					+e('img').image._second(src='assets/images/instruments/tuba2.png')
+					+e.image-wrap._first
+						+e('img').image.js-image(src='assets/images/instruments/tuba1.png' data-zoom='assets/images/instruments/tuba1.png')
+						+e.zoom.zoom.js-for-zoom-photo
+
+					+e.image-wrap._second
+						+e('img').image.js-image2(src='assets/images/instruments/tuba2.png' data-zoom='assets/images/instruments/tuba2.png')
+						+e.zoom.zoom.js-for-zoom-photo
+
 
 				+e.wrapper
 					+title.tuba__title Туба

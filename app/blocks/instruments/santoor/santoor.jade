@@ -15,7 +15,9 @@ mixin santoor()
 				+e.wrapper
 					+title.santoor__title Сантур
 
-					+e('img').image(src='assets/images/instruments/santoor.png')
+					+e.image-wrap
+						+e('img').image.js-image(src='assets/images/instruments/santoor.png' data-zoom='assets/images/instruments/santoor.png')
+						+e.zoom.zoom.js-for-zoom-photo
 
 					+e('a').info(href='santoor-info.html')
 
