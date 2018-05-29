@@ -7,5 +7,7 @@ doctype html
 html(lang='ru')
 	include ../head/head
 	+page
+		+e('audio').audio.js-audio-click
+			+e('source').source(src='assets/audio/click.mp3' type='audio/mpeg')
 		block content
 		+scripts(['app.min.js'])

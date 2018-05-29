@@ -6,6 +6,15 @@ import Main from '../blocks/main/main';
 import Conductor from '../blocks/conductor/conductor';
 import Popup from '../blocks/popup/popup';
 
+$(window).on('click', () => {
+	const selector = {
+		audio: '.js-audio-click'
+	};
+	const $audio = $('body').find(selector.audio);
+
+	$audio[0].play();
+});
+
 $(() => {
 	svg4everybody();
 });
