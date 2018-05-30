@@ -50,7 +50,7 @@ export default class {
 			this.$buttonAudio[0].pause();
 		}
 
-		if (this.$audio) {
+		if (this.$audio.length) {
 			this.$audio[0].pause();
 		}
 		this.youTubePlayer($targetPopup);
@@ -67,7 +67,7 @@ export default class {
 			this.$buttonAudio[0].loop = true;
 		}
 
-		if (this.$audio) {
+		if (this.$audio.length) {
 			this.$audio[0].play();
 		}
 		this.stopVideo();
