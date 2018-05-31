@@ -8,6 +8,7 @@ mixin button(data)
 		class=(data.type === 'music') ? 'js-button' : ''
 		class=(data.type === 'video') ? 'js-popup-open' : ''
 	)&attributes(attributes)
+
 		if data.audio
 			+e('audio').audio.js-button-audio
 				+e('source').source(src=data.audio type='audio/mpeg')
