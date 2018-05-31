@@ -12,7 +12,7 @@ import rename from 'gulp-rename';
 import sourcemaps from 'gulp-sourcemaps';
 import errorHandler from 'gulp-plumber-error-handler';
 
-const isDebug = process.env.NODE_ENV !== 'production';
+const isDebug = true;
 
 gulp.task('styles', () => (
 	gulp.src('app/styles/*.styl')

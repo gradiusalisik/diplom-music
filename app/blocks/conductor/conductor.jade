@@ -3,52 +3,53 @@ include /blocks/link-arrow/link-arrow
 
 mixin conductor()
 	+b.conductor.pages&attributes(attributes)&attributes({class: 'js-conductor'})
-		+container.container_type_big
-			+e.wrap
-				+e('h1').title НАЖМИ НА ИНСТРУМЕНТ/ГРУППУ ЧТОБЫ ОТКЛЮЧИТЬ
-				+e('video').video.js-main-video(loop autoplay)
-					+e('source').source(src='assets/video/conductor.mp4' type='video/mp4')
+		+e.wrap-head.wrap
+			+container.container_type_big
+				+e.wrap
+					+e('h1').title НАЖМИ НА ИНСТРУМЕНТ/ГРУППУ ЧТОБЫ ОТКЛЮЧИТЬ
+					+e('video').video.js-main-video(loop autoplay)
+						+e('source').source(src='assets/video/conductor.mp4' type='video/mp4')
 
-				+e.instrument._piano.js-conductor-instruments
-					+e('audio').audio.js-conductor-audio(autoplay loop)
-						+e('source').source(src='assets/audio/conductor/piano.mp3' type='audio/mpeg')
-
-				+e.instrument._litavry.js-conductor-instruments
-					+e('audio').audio.js-conductor-audio(autoplay loop)
-						+e('source').source(src='assets/audio/conductor/litavri.mp3' type='audio/mpeg')
-
-				+e.instrument._woodwind.js-conductor-instruments
-					+e('audio').audio.js-conductor-audio(autoplay loop)
-						+e('source').source(src='assets/audio/conductor/woodwinds.mp3' type='audio/mpeg')
-
-				+e.instrument._cooperwinds.js-conductor-instruments
-					+e('audio').audio.js-conductor-audio(autoplay loop)
-						+e('source').source(src='assets/audio/conductor/cooperwinds.mp3' type='audio/mpeg')
-
-				+e.instrument._stringed-bow.js-conductor-instruments
-					+e('audio').audio.js-conductor-audio(autoplay loop)
-						+e('source').source(src='assets/audio/conductor/strings.mp3' type='audio/mpeg')
-
-				+e.instrument._arfa.js-conductor-instruments
-					+e('audio').audio.js-conductor-audio(autoplay loop)
-						+e('source').source(src='assets/audio/conductor/arfa.mp3' type='audio/mpeg')
-
-				+e.etno
-					+e.instrument._tabla.js-conductor-instruments
+					+e.instrument._piano.js-conductor-instruments
 						+e('audio').audio.js-conductor-audio(autoplay loop)
-							+e('source').source(src='assets/audio/conductor/tabla.mp3' type='audio/mpeg')
+							+e('source').source(src='assets/audio/conductor/piano.mp3' type='audio/mpeg')
 
-					+e.instrument._duduk.js-conductor-instruments
+					+e.instrument._litavry.js-conductor-instruments
 						+e('audio').audio.js-conductor-audio(autoplay loop)
-							+e('source').source(src='assets/audio/conductor/duduk.mp3' type='audio/mpeg')
+							+e('source').source(src='assets/audio/conductor/litavri.mp3' type='audio/mpeg')
 
-					+e.instrument._santoor.js-conductor-instruments
+					+e.instrument._woodwind.js-conductor-instruments
 						+e('audio').audio.js-conductor-audio(autoplay loop)
-							+e('source').source(src='assets/audio/conductor/santoor.mp3' type='audio/mpeg')
+							+e('source').source(src='assets/audio/conductor/woodwinds.mp3' type='audio/mpeg')
 
-					+e.instrument._deedjereedoo.js-conductor-instruments
+					+e.instrument._cooperwinds.js-conductor-instruments
 						+e('audio').audio.js-conductor-audio(autoplay loop)
-							+e('source').source(src='assets/audio/conductor/deedjereedoo.mp3' type='audio/mpeg')
+							+e('source').source(src='assets/audio/conductor/cooperwinds.mp3' type='audio/mpeg')
 
-				+e.footer
-					+link-arrow({href: 'main.html'})
+					+e.instrument._stringed-bow.js-conductor-instruments
+						+e('audio').audio.js-conductor-audio(autoplay loop)
+							+e('source').source(src='assets/audio/conductor/strings.mp3' type='audio/mpeg')
+
+					+e.instrument._arfa.js-conductor-instruments
+						+e('audio').audio.js-conductor-audio(autoplay loop)
+							+e('source').source(src='assets/audio/conductor/arfa.mp3' type='audio/mpeg')
+
+					+e.etno
+						+e.instrument._tabla.js-conductor-instruments
+							+e('audio').audio.js-conductor-audio(autoplay loop)
+								+e('source').source(src='assets/audio/conductor/tabla.mp3' type='audio/mpeg')
+
+						+e.instrument._duduk.js-conductor-instruments
+							+e('audio').audio.js-conductor-audio(autoplay loop)
+								+e('source').source(src='assets/audio/conductor/duduk.mp3' type='audio/mpeg')
+
+						+e.instrument._santoor.js-conductor-instruments
+							+e('audio').audio.js-conductor-audio(autoplay loop)
+								+e('source').source(src='assets/audio/conductor/santoor.mp3' type='audio/mpeg')
+
+						+e.instrument._deedjereedoo.js-conductor-instruments
+							+e('audio').audio.js-conductor-audio(autoplay loop)
+								+e('source').source(src='assets/audio/conductor/deedjereedoo.mp3' type='audio/mpeg')
+
+					+e.footer
+						+link-arrow({href: 'main.html'})
