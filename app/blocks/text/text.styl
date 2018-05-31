@@ -2,10 +2,14 @@
 	font-family $font-vwhead
 	font-size 20px
 	line-height 24px
-	color #330000
+	color #0f2329
 
 	&:not(:last-child)
 		margin-bottom 20px
+
+	&_type_main
+		&:not(:last-child)
+			margin-bottom 10px
 
 	&_size
 		&_small-big
@@ -24,9 +28,16 @@
 			font-size 18px
 			line-height 22px
 
+		&_most-big
+			font-size 30px
+			line-height 32px
+
 	&_color
 		&_dark
 			color #0f2326
+
+		&_white
+			color #fff
 
 	&_uppercase
 		text-transform uppercase
@@ -34,5 +45,10 @@
 		&:not(:last-child)
 			margin-bottom 0
 
-	&_fontgrotesk
-		font-family $font-reformaGrotesk
+	&_font
+		&_grotesk
+			font-family $font-reformaGrotesk
+
+		&_advent
+			font-family $font-advent
+			font-weight bold

@@ -1,12 +1,14 @@
 include /blocks/container/container
 include /blocks/link-arrow/link-arrow
+include /blocks/text/text
 
 mixin conductor()
 	+b.conductor.pages&attributes(attributes)&attributes({class: 'js-conductor'})
 		+e.wrap-head.wrap
 			+container.container_type_big
 				+e.wrap
-					+e('h1').title НАЖМИ НА ИНСТРУМЕНТ/ГРУППУ ЧТОБЫ ОТКЛЮЧИТЬ
+					+e.title
+						+text._font_advent._type_main._color_white._size_most-big нажми на инструмент/группу чтобы отключить
 					+e('video').video.js-main-video(loop autoplay)
 						+e('source').source(src='assets/video/conductor.mp4' type='video/mp4')
 
