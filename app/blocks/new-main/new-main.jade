@@ -1,0 +1,41 @@
+include /blocks/container/container
+
+mixin new-main()
+	+b.new-main&attributes(attributes)
+		+e.wrap-head.wrap
+			+container.container_type_big
+				+e('a').link(href=jv0) Интерактивная энциклопедия
+
+				+e('h1').title-main Симфонический оркестр
+
+				+e.content
+					+e('a').card(href=jv0)
+						+e('img').image(src='assets/images/new-main/sostav_img.png')
+						+e.link._card История возникновения
+
+					+e.card._link
+						+e('img').image(src='assets/images/new-main/history_img.png')
+						+e('a').link._card Состав оркестра
+
+						+e.card-content
+							+e.links
+								+e('a').link._content(href=jv0) Струнно-смычковые
+								+e('a').link._content(href=jv0) Духовые деревянные
+								+e('a').link._content(href=jv0) Медно-духовые
+								+e('a').link._content(href=jv0) Одиночные
+								+e('a').link._content(href=jv0) Ударная группа
+
+					+e('a').card(href=jv0)
+						+e('img').image(src='assets/images/new-main/stage_img.png')
+						+e.link._card Интерактивная сцена
+
+					+e.card._link
+						+e('img').image(src='assets/images/new-main/parents_img.png')
+						+e('a').link._card Прародители
+
+						+e.card-content
+							+e.links
+								+e('a').link._content(href=jv0) Ребаб
+								+e('a').link._content(href=jv0) Рожок
+								+e('a').link._content(href=jv0) Горн
+								+e('a').link._content(href=jv0) Тимпан

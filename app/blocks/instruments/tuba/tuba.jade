@@ -1,5 +1,5 @@
 include /blocks/container/container
-include /blocks/link-arrow/link-arrow
+include /blocks/links-back/links-back
 include /blocks/button/button
 include /blocks/title/title
 include /blocks/text/text
@@ -8,44 +8,28 @@ mixin tuba()
 	+b.tuba.pages&attributes(attributes)
 		+e.wrap.wrap
 			+container
-				+e.wrap-image
-					+e.image-wrap._first
-						+e('img').image.js-image(src='assets/images/instruments/tuba1.png' data-zoom='assets/images/instruments/tuba1.png')
-						+e.zoom.zoom.js-for-zoom-photo
-
-					+e.image-wrap._second
-						+e('img').image.js-image2(src='assets/images/instruments/tuba2.png' data-zoom='assets/images/instruments/tuba2.png')
-						+e.zoom.zoom.js-for-zoom-photo
-
-				+e.wrapper
+				+e.content-title
+					+e.empty
 					+title.tuba__title Туба
 
-					+text.tuba__text.tuba__text_right
-						|  Широкомензурный духовой медный  инструмент, самый
-						br
-						| низкий по регистру.  Обладает суровым, массивным
-						br
-						| тембром, звук тубы трудноинтонируемый. Используется в
-						br
-						| основном в симфоническом оркестре, где ей принадлежит
-						br
-						| роль басового инструмента в группе медных духовых.
-						br
-						| Активно используется в духовых оркестрах, реже в
-						br
-						| джазовых и эстрадных ансамблях.
+				+e.wrapper
 
-					+text.tuba__text.tuba__text_right
-						| В качестве сольного инструмента туба выступает
-						br
-						| сравнительно редко. Последнее пополнение
-						br
-						| классического состава  оркестра.
-						br
-						| С введением этого инструмента завершилось
-						br
-						| формирование симфонического оркестра.
+					+e.wrap-image
+						+e.image-wrap._first
+							+e('img').image.js-image(src='assets/images/instruments/tuba1.png' data-zoom='assets/images/instruments/tuba1.png')
+							+e.zoom.zoom.js-for-zoom-photo
+
+						+e.image-wrap._second
+							+e('img').image.js-image2(src='assets/images/instruments/tuba2.png' data-zoom='assets/images/instruments/tuba2.png')
+							+e.zoom.zoom.js-for-zoom-photo
+
+					+e.content-text
+						+text.tuba__text
+							|  Широкомензурный духовой медный  инструмент, самый низкий по регистру.  Обладает суровым, массивным тембром, звук тубы трудноинтонируемый. Используется в основном в симфоническом оркестре, где ей принадлежит роль басового инструмента в группе медных духовых. Активно используется в духовых оркестрах, реже в джазовых и эстрадных ансамблях.
+
+						+text.tuba__text
+							| В качестве сольного инструмента туба выступает сравнительно редко. Последнее пополнение классического состава  оркестра. С введением этого инструмента завершилось формирование симфонического оркестра.
 
 				+e.footer
-					+link-arrow({href: 'cooperwinds.html'})
+					+links-back({href: 'cooperwinds.html'})
 					+button({audio: 'assets/audio/instruments/Tuba.mp3'})

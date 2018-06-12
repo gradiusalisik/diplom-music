@@ -12,11 +12,17 @@
 
 	&__title
 		margin-bottom 10px
-		text-align center
 
 	&__text
 		width 100%
-		text-align center
+
+	&__contents
+		width 100%
+		display flex
+
+	&__empty
+		margin-right 50px
+		width 346px
 
 	&__link
 		text-decoration none
@@ -45,14 +51,12 @@
 		display flex
 		width 346px
 
-	&__button-video
+	&__buttons
 		position absolute
 		z-index 4
-		top -20px
-		left 60px
+		display flex
+		right 0
+		bottom 75px
 
 	&__button-audio
-		position absolute
-		z-index 4
-		right 0
-		bottom 60px
+		margin-right 30px

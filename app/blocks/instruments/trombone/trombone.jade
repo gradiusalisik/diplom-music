@@ -1,5 +1,5 @@
 include /blocks/container/container
-include /blocks/link-arrow/link-arrow
+include /blocks/links-back/links-back
 include /blocks/button/button
 include /blocks/title/title
 include /blocks/text/text
@@ -9,39 +9,24 @@ mixin trombone()
 	+b.trombone.pages&attributes(attributes)
 		+e.wrap.wrap
 			+container
-				+e.image-wrap
-					+e('img').image.js-image(src='assets/images/instruments/trombon.png' data-zoom='assets/images/instruments/trombon.png')
-					+e.zoom.zoom.js-for-zoom-photo
-
-				+e.wrapper
+				+e.content-title
+					+e.empty
 					+title.trombone__title Тромбон
 
-					+text.trombone__text.trombone__text_right
-						| Басово-теноровый регистр.
-						br
-						|  Известен с XV века. От других медных духовых
-						br
-						| отличается наличием кулисы — особой передвижной
-						br
-						| U-образной трубки, с помощью которой музыкант изменяет
-						br
-						| объём заключённого в инструменте воздуха, достигая
-						br
-						| возможности исполнять звуки  хроматического звукоряда
-						br
-						| (на трубе, валторне, тубе этой цели служат вентили).
+				+e.wrapper
+					+e.image-wrap
+						+e('img').image.js-image(src='assets/images/instruments/trombon.png' data-zoom='assets/images/instruments/trombon.png')
+						+e.zoom.zoom.js-for-zoom-photo
 
-					+text.trombone__text.trombone__text_last
-						| Основным принципом игры на тромбоне
-						br
-						| являются получение гармонических созвуков
-						br
-						| путём смены положения губ и изменение длины столба
-						br
-						| воздуха в инструменте, достигаемое с помощью кулисы
+					+e.content-text
+						+text.trombone__text
+							| Басово-теноровый регистр.  Известен с XV века. От других медных духовых отличается наличием кулисы — особой передвижной U-образной трубки, с помощью которой музыкант изменяет объём заключённого в инструменте воздуха, достигая возможности исполнять звуки  хроматического звукоряда (на трубе, валторне, тубе этой цели служат вентили).
+
+						+text.trombone__text
+							| Основным принципом игры на тромбоне являются получение гармонических созвуков путём смены положения губ и изменение длины столба воздуха в инструменте, достигаемое с помощью кулисы
 
 				+e.footer
-					+link-arrow({href: 'cooperwinds.html'})
+					+links-back({href: 'cooperwinds.html'})
 
 					+e.wrap-buttons
 						+e.button-video

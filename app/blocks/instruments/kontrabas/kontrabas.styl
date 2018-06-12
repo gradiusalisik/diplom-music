@@ -6,19 +6,15 @@
 	&__wrapper
 		position relative
 		z-index 2
+		display flex
+		justify-content space-between
 
 	&__title
 		margin-bottom 10px
-		text-align center
-
-	&__text
-		width 516px
 
 	&__image-wrap
-		position absolute
-		z-index 3
-		top 22px
-		right -22px
+		position relative
+		flex 0 0 auto
 		width 360px
 		height 548px
 
@@ -26,6 +22,9 @@
 		size 100%
 
 	&__footer
+		position absolute
+		left 0
+		bottom 35px
 		margin-top 20px
 		padding-right 50px
 		display flex

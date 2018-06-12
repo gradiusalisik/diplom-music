@@ -1,5 +1,6 @@
 include /blocks/container/container
 include /blocks/text/text
+include /blocks/link-arrow/link-arrow
 
 mixin main()
 	+b.main.pages&attributes(attributes)&attributes({class: 'js-main'})
@@ -59,3 +60,6 @@ mixin main()
 				+e('button').button.js-main-button(type='button')
 					+e.open
 					+e.close
+
+				+e.link-arrow
+					+link-arrow({href: 'new-main.html'})

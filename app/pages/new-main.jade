@@ -1,0 +1,9 @@
+extends /blocks/layout-default/layout-default
+
+include /blocks/new-main/new-main
+
+block head
+	- var pageTitle = 'new-main';
+
+block content
+	+new-main

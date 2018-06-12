@@ -1,5 +1,5 @@
 include /blocks/container/container
-include /blocks/link-arrow/link-arrow
+include /blocks/links-back/links-back
 include /blocks/button/button
 include /blocks/title/title
 include /blocks/text/text
@@ -9,25 +9,25 @@ mixin goboi()
 	+b.goboi.pages&attributes(attributes)
 		+e.wrap.wrap
 			+container
+				+title.goboi__title Гобой
 				+e.wrapper
-					+title.goboi__title Гобой
+					+e.content-wrap
+						+text.goboi__text
+							| Инструмент сопранового регистра, представляющий собой трубку конической формы с системой клапанов и двойной тростью (язычком). Инструмент обладает певучим, однако несколько гнусавым, а в верхнем регистре — резким тембром.
+							br
+							| Современный вид гобой приобрёл в первой половине XVIII века.
 
-					+text.goboi__text
-						| Инструмент сопранового регистра, представляющий собой трубку конической формы с системой клапанов и двойной тростью (язычком). Инструмент обладает певучим, однако несколько гнусавым, а в верхнем регистре — резким тембром.
-						br
-						| Современный вид гобой приобрёл в первой половине XVIII века.
+						+text.goboi__text
+							| Основу репертуара для гобоя составляют
+							a.goboi__link(href=jv0) произведения эпохи барокко
+							| &nbsp;(сочинения Баха и его современников) и классицизма (Моцарт). Реже исполняются сочинения композиторов-романтиков (Шумана) и современных композиторов.
 
-					+text.goboi__text
-						| Основу репертуара для гобоя составляют
-						a.goboi__link(href=jv0) произведения эпохи барокко
-						| &nbsp;(сочинения Баха и его современников) и классицизма (Моцарт). Реже исполняются сочинения композиторов-романтиков (Шумана) и современных композиторов.
+					+e.image-wrap
+						+e('img').image.js-image(src='assets/images/instruments/goboe.png' data-zoom='assets/images/instruments/goboe.png')
+						+e.zoom.zoom.js-for-zoom-photo
 
-				+e.image-wrap
-					+e('img').image.js-image(src='assets/images/instruments/goboe.png' data-zoom='assets/images/instruments/goboe.png')
-					+e.zoom.zoom.js-for-zoom-photo
-
-				+e.link-arrow
-					+link-arrow({href: 'woodwinds.html'})
+				+e.links-back
+					+links-back({href: 'woodwinds.html'})
 
 				+e.wrap-buttons
 					+e.button-video

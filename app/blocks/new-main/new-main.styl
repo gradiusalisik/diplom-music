@@ -1,0 +1,92 @@
+.new-main
+	display flex
+	justify-content center
+	align-items center
+	height 100vh
+
+	&__wrap-head
+		text-align center
+		background-image url('../images/bg-instruments.jpg')
+		background-size cover
+
+	&__link
+		display inline-block
+		font-family $font-reformaGrotesk
+		font-size 28px
+		font-weight 500
+		text-decoration none
+		text-transform uppercase
+		color #545044
+		transition color .3s
+
+		&_card
+			font-size 30px
+			color #303c4e
+
+		&_content
+			color #fff
+
+			&:not(:last-child)
+				margin-bottom 20px
+
+		&:hover
+			color #0086c4
+
+	&__card:hover &__link_card
+		color #0086c4
+
+	&__title-main
+		margin-top 50px
+		font-family $font-advent
+		font-size 48px
+		color #303c4e
+
+	&__content
+		padding-x 50px
+		padding-top 100px
+		display flex
+		justify-content space-between
+
+	&__card
+		position relative
+		width 244px
+
+		&_link
+			cursor pointer
+
+	&__card_link:hover &__card-content
+		visibility visible
+		opacity 1
+
+	&__image
+		margin-bottom 30px
+		width 100%
+		height 175px
+
+	&__card-content
+		position absolute
+		top 0
+		left 0
+		display flex
+		justify-content center
+		align-items center
+		width 100%
+		height 100%
+		visibility hidden // @stylint off
+		opacity 0
+		transition opacity .3s, visibility .3s
+
+		&::before
+			position absolute
+			top 0
+			left 0
+			width 100%
+			height 100%
+			content ''
+			background-color rgba(0,0,0, 0.6)
+
+
+	&__links
+		position relative
+		display flex
+		flex-direction column

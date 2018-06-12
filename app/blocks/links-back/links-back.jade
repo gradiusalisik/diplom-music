@@ -1,0 +1,9 @@
+include /blocks/link-arrow/link-arrow
+
+mixin links-back(data)
+	- data = data || {};
+
+	+b.links-back&attributes(attributes)
+		+link-arrow({href: data.hrefBack})
+		+e.scene
+			+link-arrow({type: 'scene', href: 'main.html'})

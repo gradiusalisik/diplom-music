@@ -1,5 +1,5 @@
 include /blocks/container/container
-include /blocks/link-arrow/link-arrow
+include /blocks/links-back/links-back
 include /blocks/button/button
 include /blocks/title/title
 include /blocks/text/text
@@ -43,8 +43,8 @@ mixin arfa()
 					+e('img').image.js-image(src='assets/images/instruments/arfa.png' data-zoom='assets/images/instruments/arfa.png')
 					+e.zoom.zoom.js-for-zoom-photo
 
-				+e.link-arrow
-					+link-arrow({href: 'main.html'})
+				+e.links-back
+					+links-back({href: 'main.html'})
 
 				+e.wrap-buttons
 					+button({audio: 'assets/audio/instruments/Arfa.mp3'})

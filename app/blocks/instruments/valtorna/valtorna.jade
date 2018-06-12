@@ -1,5 +1,5 @@
 include /blocks/container/container
-include /blocks/link-arrow/link-arrow
+include /blocks/links-back/links-back
 include /blocks/button/button
 include /blocks/title/title
 include /blocks/text/text
@@ -8,7 +8,9 @@ mixin valtorna()
 	+b.valtorna.pages&attributes(attributes)
 		+e.wrap.wrap
 			+container
-				+title.valtorna__title Валторна
+				+e.content-title
+					+e.empty
+					+title.valtorna__title Валторна
 
 				+e.wrapper
 					+e.wrap-image
@@ -23,5 +25,5 @@ mixin valtorna()
 						| Валторне хорошо удаётся исполнение длинных нот (в том числе на органном пункте) и мелодий широкого дыхания. Расход воздуха на этом инструменте относительно невелик (не считая крайних регистров).
 
 				+e.footer
-					+link-arrow({href: 'cooperwinds.html'})
+					+links-back({href: 'cooperwinds.html'})
 					+button({audio: 'assets/audio/instruments/Valtorna.mp3'})
