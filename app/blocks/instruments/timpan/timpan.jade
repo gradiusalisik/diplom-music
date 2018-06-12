@@ -1,0 +1,30 @@
+
+include /blocks/container/container
+include /blocks/links-back/links-back
+include /blocks/button/button
+include /blocks/title/title
+include /blocks/text/text
+include /blocks/popup/popup
+
+mixin timpan()
+	+b.timpan.pages&attributes(attributes)
+		+e.wrap.wrap
+			+container
+				+title.duduk__title Тимпан
+				+e.wrapper
+					+e.wrap-content
+						+text
+							| Древний ударный музыкальный инструмент-мембранофон, предшественник современных литавр.
+
+						+text
+							| В Древней Греции тимпаном называли односторонний барабан с глубоким резонатором. На натянутой на резонатор кожаной мембране играли кистями рук. В Грецию инструмент попал и к V веку до новой эры распространился по всей её территории вместе с оргиастическими культами Диониса и Кибелы из Фракии и Фригии; греческое слово, обозначающее барабанный бой, также обозначает служение Кибеле. Многочисленны упоминания тимпана в античной литературе (например, в трагедии Еврипида «Вакханки», в «Пире мудрецов» Афинея) и его изображения в античной вазописи (наиболее часто — в руках менад и корибантов).
+
+						+text
+							| В Древнем Риме название «тимпан» носил как односторонний, так и двусторонний барабаны. Наряду с культами (по греческому образцу) Вакха и Кибелы тимпан использовался уличными музыкантами (как на известной помпейской мозаике).
+
+					+e.image-wrap
+						+e('img').image.js-image(src='assets/images/instruments/timpan.png' data-zoom='assets/images/instruments/timpan.png')
+						+e.zoom.zoom.js-for-zoom-photo
+
+				+e.links-back
+					+links-back({href: 'new-main.html'})

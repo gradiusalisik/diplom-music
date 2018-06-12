@@ -1,7 +1,7 @@
 include /blocks/container/container
 
 mixin new-main()
-	+b.new-main&attributes(attributes)
+	+b.new-main.pages&attributes(attributes)
 		+e.wrap-head.wrap
 			+container.container_type_big
 				+e('a').link(href=jv0) Интерактивная энциклопедия

@@ -1,0 +1,39 @@
+
+include /blocks/container/container
+include /blocks/links-back/links-back
+include /blocks/button/button
+include /blocks/title/title
+include /blocks/text/text
+include /blocks/popup/popup
+
+mixin gorn()
+	+b.gorn.pages&attributes(attributes)
+		+e.wrap.wrap
+			+container
+				+title.duduk__title Горн
+				+e.wrapper
+					+e.wrap-content
+						+text
+							| Сигнальный музыкальный инструмент, родоначальник всех медных духовых инструментов.
+
+						+text
+							| Горн произошёл от древних музыкальных и сигнальных инструментов, сделанных из рогов животных (отсюда название).
+							br
+							| Первые горны использовались в качестве охотничьих рогов. Они были изогнуты кольцом (обычно таких колец было два, но бывали и горны с одним или тремя кольцами), что делало их похожими на валторну, а также в каретах (здесь горны служили прообразом автомобильных гудков).
+
+						+text
+							| Напоминает трубу, но в нём отсутствует вентильный механизм, отчего его исполнительные возможности резко ограничены: горн может воспроизводить ноты только в пределах гармонических созвуков. Высота звука при игре на горне может регулироваться только с помощью амбушюра. Именно по этой причине в оркестрах горн не употребляется, но успешно применяется в армии как сигнальный инструмент. В советские времена горн, как и малый барабан, были незаменимыми атрибутами пионерских отрядов и дружин.
+
+					+e.image-wrap
+						+e('img').image.js-image(src='assets/images/instruments/gorn.png' data-zoom='assets/images/instruments/gorn.png')
+						+e.zoom.zoom.js-for-zoom-photo
+
+				+e.links-back
+					+links-back({href: 'main.html'})
+
+				+e.wrap-buttons
+					+e.button-video
+						+button({type: 'video', popup: 'gorn'})
+					+button({audio: 'assets/audio/instruments/gorn.mp3'})
+
+		+popup({id: 'gorn'})
