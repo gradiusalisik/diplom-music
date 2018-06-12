@@ -1,0 +1,20 @@
+include /blocks/container/container
+include /blocks/links-back/links-back
+
+mixin arfa-piano()
+	+b.arfa-piano&attributes(attributes)
+		+e.wrap-head.wrap
+			+container
+
+				+e.wrapper
+					+e('a').content(href=jv0)
+						+e('img').image(src='assets/images/arfa-piano/piano.png')
+						+e('p').text._piano Рояль
+
+					+e('a').content(href=jv0)
+						+e('img').image(src='assets/images/arfa-piano/arfa.png')
+						+e('p').text._arfa Арфа
+
+
+				+e.links-back
+					+links-back({href: 'new-main.html'})

@@ -1,0 +1,52 @@
+.arfa-piano
+	height 100vh
+	display flex
+	justify-content center
+	align-items center
+
+	&__wrap-head
+		background-image url('../images/bg-instruments.jpg')
+		background-size cover
+
+	&__wrapper
+		display flex
+		justify-content space-between
+		align-items center
+		height calc(100% - 100px)
+
+	&__content
+		position relative
+
+		&:hover
+			filter drop-shadow(6px 6px 15px white)
+
+	&__text
+		position absolute
+		font-family $font-reformaGrotesk
+		font-size 65px
+		font-weight 300
+		text-transform uppercase
+		color #443c39
+
+		&_piano
+			right 100px
+			bottom 20px
+
+		&_arfa
+			top -20px
+			right 50px
+
+	&__image
+		&_piano
+			width 368px
+			height 361px
+
+		&_arfa
+			width 196px
+			height 361px
+
+
+	&__links-back
+		position absolute
+		left 0
+		bottom 35px
